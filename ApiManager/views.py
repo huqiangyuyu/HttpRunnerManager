@@ -24,7 +24,7 @@ from ApiManager.utils.pagination import get_pager_info
 from ApiManager.utils.runner import run_by_batch, run_test_by_type
 from ApiManager.utils.task_opt import delete_task, change_task_status
 from ApiManager.utils.testcase import get_time_stamp
-from httprunner import HttpRunner
+from httprunner.api import HttpRunner
 
 logger = logging.getLogger('HttpRunnerManager')
 
@@ -233,9 +233,9 @@ def run_test(request):
         type = request.POST.get('type', 'test')
 
         run_test_by_type(id, base_url, testcase_dir_path, type)
-        runner.run(testcase_dir_path)
+        summary = runner.run(testcase_dir_path)
         shutil.rmtree(testcase_dir_path)
-        runner.summary = timestamp_to_datetime(runner.summary, type=False)
+        runner.summary = timestamp_to_datetime(summary, type=False)
 
         return render_to_response('report_template.html', runner.summary)
 

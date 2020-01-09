@@ -13,7 +13,7 @@ from ApiManager.utils.emails import send_email_reports
 from ApiManager.utils.operation import add_test_reports
 from ApiManager.utils.runner import run_by_project, run_by_module, run_by_suite
 from ApiManager.utils.testcase import get_time_stamp
-from httprunner import HttpRunner, logger
+from httprunner.api import HttpRunner, logger
 
 
 @shared_task
