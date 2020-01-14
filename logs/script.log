@@ -437,3 +437,163 @@ Traceback (most recent call last):
 ValueError: invalid literal for int() with base 10: '用例_quant_login_out(登入登出)'
 2018-07-02 14:59:50,449 [HttpRunnerManager:78] [views:log_out] [INFO]- yinquanwang退出
 2018-07-02 14:59:52,333 [HttpRunnerManager:45] [views:login] [INFO]- yinquanwang 登录成功
+2019-11-18 17:44:48,470 [django.request:93] [base:get_response] [WARNING]- Not Found: /
+2019-11-18 17:58:27,588 [django.request:93] [base:get_response] [WARNING]- Not Found: /
+2019-11-18 17:59:22,654 [HttpRunnerManager:35] [operation:add_register_data] [INFO]- 新增用户：ApiManager.UserInfo.objects
+2019-11-18 17:59:28,427 [HttpRunnerManager:60] [views:login] [INFO]- huqiang 登录失败, 请检查用户名或者密码
+2019-11-18 17:59:31,397 [HttpRunnerManager:60] [views:login] [INFO]- huqiang 登录失败, 请检查用户名或者密码
+2019-11-18 17:59:35,436 [HttpRunnerManager:60] [views:login] [INFO]- huqiang 登录失败, 请检查用户名或者密码
+2019-11-18 17:59:38,147 [HttpRunnerManager:60] [views:login] [INFO]- huqiang 登录失败, 请检查用户名或者密码
+2019-11-18 17:59:45,268 [HttpRunnerManager:55] [views:login] [INFO]- test 登录成功
+2020-01-09 15:43:47,594 [django.request:93] [base:get_response] [WARNING]- Not Found: /
+2020-01-09 15:44:22,767 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/register/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\HttpRunnerManager\HttpRunnerManager\activator.py", line 10, in process
+    app = __import__("%s.views" % app)
+  File "D:\HttpRunnerManager\ApiManager\views.py", line 17, in <module>
+    from ApiManager.tasks import main_hrun
+  File "D:\HttpRunnerManager\ApiManager\tasks.py", line 16, in <module>
+    from httprunner import HttpRunner, logger
+ImportError: cannot import name 'HttpRunner'
+2020-01-09 15:44:45,466 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/register/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\HttpRunnerManager\HttpRunnerManager\activator.py", line 10, in process
+    app = __import__("%s.views" % app)
+  File "D:\HttpRunnerManager\ApiManager\views.py", line 17, in <module>
+    from ApiManager.tasks import main_hrun
+  File "D:\HttpRunnerManager\ApiManager\tasks.py", line 16, in <module>
+    from httprunner import HttpRunner, logger
+ImportError: cannot import name 'HttpRunner'
+2020-01-09 15:46:01,082 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/register/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\HttpRunnerManager\HttpRunnerManager\activator.py", line 10, in process
+    app = __import__("%s.views" % app)
+  File "D:\HttpRunnerManager\ApiManager\views.py", line 17, in <module>
+    from ApiManager.tasks import main_hrun
+  File "D:\HttpRunnerManager\ApiManager\tasks.py", line 16, in <module>
+    from httprunner import HttpRunner, logger
+ImportError: cannot import name 'HttpRunner'
+2020-01-09 15:59:16,702 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/register/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "d:\HttpRunnerManager\HttpRunnerManager\activator.py", line 10, in process
+    app = __import__("%s.views" % app)
+  File "d:\HttpRunnerManager\ApiManager\views.py", line 17, in <module>
+    from ApiManager.tasks import main_hrun
+  File "d:\HttpRunnerManager\ApiManager\tasks.py", line 16, in <module>
+    from httprunner import HttpRunner, logger
+ImportError: cannot import name 'HttpRunner'
+2020-01-09 16:01:12,851 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/register/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "d:\HttpRunnerManager\HttpRunnerManager\activator.py", line 10, in process
+    app = __import__("%s.views" % app)
+  File "d:\HttpRunnerManager\ApiManager\views.py", line 27, in <module>
+    from httprunner import HttpRunner
+ImportError: cannot import name 'HttpRunner'
+2020-01-09 16:01:20,350 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/register/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "d:\HttpRunnerManager\HttpRunnerManager\activator.py", line 10, in process
+    app = __import__("%s.views" % app)
+  File "d:\HttpRunnerManager\ApiManager\views.py", line 27, in <module>
+    from httprunner import HttpRunner
+ImportError: cannot import name 'HttpRunner'
+2020-01-09 16:03:57,080 [HttpRunnerManager:35] [operation:add_register_data] [INFO]- 新增用户：ApiManager.UserInfo.objects
+2020-01-09 16:04:03,068 [HttpRunnerManager:60] [views:login] [INFO]- huqiang 登录失败, 请检查用户名或者密码
+2020-01-09 16:04:07,350 [HttpRunnerManager:55] [views:login] [INFO]- huqiang 登录成功
+2020-01-09 16:32:29,564 [HttpRunnerManager:62] [operation:add_project_data] [INFO]- 项目添加成功：{'project_name': '测试', 'responsible_name': '测试', 'test_user': '测试', 'dev_user': '测试', 'publish_app': '测试', 'simple_desc': '测试', 'other_desc': '测试'}
+2020-01-09 16:49:51,094 [HttpRunnerManager:110] [operation:add_module_data] [INFO]- 模块添加成功：{'module_name': 'test01', 'test_user': '测试', 'simple_desc': 'test01', 'other_desc': 'test01', 'belong_project': <ProjectInfo: ProjectInfo object (1)>}
+2020-01-09 16:55:07,158 [HttpRunnerManager:154] [operation:add_case_data] [INFO]- 登录用例添加成功: {'test': {'request': {'url': 'http://172.32.12.243:20520/mcloudbank/user/login/pwdLogin', 'method': 'POST', 'json': {'code': '3t93802d53z9', 'deviceId': '838611AF75EBB3009022A9F086AB6413', 'userAccount': '13911112222', 'password': 'UKUYM/XYeFgw/GCaJnFl/KBVzAukYGblFLIBK46qQRz7frzKWiVCdW79gImRJNIFdAg+suiOQ4DIJ8uGicobvN6GRZHmQbrFlaRZqYVaAtpJJ5MOM10U+B+NBJlRrLZOek5t1Ls0ThjXv+sqHlVCVg==|MTIzNDU2Nzg5MDk4NzY1NA==|QIjyn/WT++DFkLC//J78ZA==', 'clientVersion': '3.0.0.1', 'imei': '862552030168899'}, 'headers': {'content-type': 'application/json', 'imei': '862552030168899', 'systemversion': 'vivo X7_android_5.1.1_172.32.16.171', 'system': '2', 'appversion': '3.0.0.1'}}, 'name': '登录', 'extract': [{}]}}
+2020-01-09 16:55:14,742 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/run_test/
+Traceback (most recent call last):
+AttributeError: 'HttpRunner' object has no attribute 'summary'
+2020-01-09 17:48:17,121 [HttpRunnerManager:60] [views:login] [INFO]- huqiang 登录失败, 请检查用户名或者密码
+2020-01-09 17:48:19,274 [HttpRunnerManager:60] [views:login] [INFO]- huqiang 登录失败, 请检查用户名或者密码
+2020-01-09 17:48:24,130 [HttpRunnerManager:55] [views:login] [INFO]- huqiang 登录成功
+2020-01-14 19:56:48,907 [django.request:93] [base:get_response] [WARNING]- Not Found: /
+2020-01-14 19:59:00,946 [HttpRunnerManager:60] [views:login] [INFO]- huqiang 登录失败, 请检查用户名或者密码
+2020-01-14 19:59:09,863 [HttpRunnerManager:60] [views:login] [INFO]- huqiang 登录失败, 请检查用户名或者密码
+2020-01-14 19:59:15,163 [HttpRunnerManager:55] [views:login] [INFO]- huqiang 登录成功
+2020-01-14 19:59:22,848 [HttpRunnerManager:89] [views:log_out] [INFO]- huqiang退出
+2020-01-14 19:59:25,564 [HttpRunnerManager:60] [views:login] [INFO]- huqiang 登录失败, 请检查用户名或者密码
+2020-01-14 19:59:29,784 [HttpRunnerManager:60] [views:login] [INFO]- huqiang 登录失败, 请检查用户名或者密码
+2020-01-14 19:59:35,584 [HttpRunnerManager:55] [views:login] [INFO]- huqiang 登录成功
+2020-01-14 20:53:14,556 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/test_api/1/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 12, in process
+    fun = getattr(view, fun)
+AttributeError: module 'ApiManager.views' has no attribute 'test_api'
+2020-01-14 20:53:57,216 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/test_api/1/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 12, in process
+    fun = getattr(view, fun)
+AttributeError: module 'ApiManager.views' has no attribute 'test_api'
+2020-01-14 21:24:43,555 [HttpRunnerManager:154] [operation:add_case_data] [INFO]- 345用例添加成功: {'test': {'request': {'url': '', 'method': 'POST', 'data': {}}, 'name': '345'}}
+2020-01-14 21:25:33,971 [HttpRunnerManager:154] [operation:add_case_data] [INFO]- 34用例添加成功: {'test': {'request': {'url': '', 'method': 'POST'}, 'name': '34'}}
+2020-01-14 21:48:41,852 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/add_api/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 201, in add_api
+    return render_to_response('add_api.html', manage_info)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: add_api.html

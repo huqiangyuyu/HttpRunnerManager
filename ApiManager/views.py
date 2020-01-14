@@ -181,6 +181,24 @@ def add_case(request):
         }
         return render_to_response('add_case.html', manage_info)
 
+@login_check
+def add_api(request):
+    """
+    新增接口
+    :param request:
+    :return:
+    """
+    account = request.session["now_account"]
+    if request.is_ajax():
+        testcase_info = json.loads(request.body.decode('utf-8'))
+        msg = case_info_logic(**testcase_info)
+        return HttpResponse(get_ajax_msg(msg, '/api/api_list/1/'))
+    elif request.method == 'GET':
+        manage_info = {
+            'account': account,
+            'project': ProjectInfo.objects.all().values('project_name').order_by('-create_time')
+        }
+        return render_to_response('add_api.html', manage_info)
 
 @login_check
 def add_config(request):
@@ -380,6 +398,38 @@ def test_list(request, id):
         }
         return render_to_response('test_list.html', manage_info)
 
+@login_check
+def test_api(request, id):
+    """
+    用例列表
+    :param request:
+    :param id: str or int：当前页
+    :return:
+    """
+
+    account = request.session["now_account"]
+    if request.is_ajax():
+        test_info = json.loads(request.body.decode('utf-8'))
+
+        if test_info.get('mode') == 'del':
+            msg = del_test_data(test_info.pop('id'))
+        elif test_info.get('mode') == 'copy':
+            msg = copy_test_data(test_info.get('data').pop('index'), test_info.get('data').pop('name'))
+        return HttpResponse(get_ajax_msg(msg, 'ok'))
+
+    else:
+        filter_query = set_filter_session(request)
+        test_list = get_pager_info(
+            TestCaseInfo, filter_query, '/api/test_list/', id)
+        manage_info = {
+            'account': account,
+            'test': test_list[1],
+            'page_list': test_list[0],
+            'info': filter_query,
+            'env': EnvInfo.objects.all().order_by('-create_time'),
+            'project': ProjectInfo.objects.all().order_by('-update_time')
+        }
+        return render_to_response('test_list.html', manage_info)
 
 @login_check
 def config_list(request, id):
