@@ -132,9 +132,24 @@ def get_pager_info(Model, filter_query, url, id, per_items=12):
             obj = obj.filter(belong_project__project_name__contains=belong_project)
         elif name is not '':
             obj = obj.filter(suite_name__contains=name)
-
+    # elif url == '/api/api_list/':
+    #     obj = obj.filter(Api_type__exact=1)
+	#
+    #     if belong_project != 'All' and belong_module != '请选择':
+    #         obj = obj.filter(belong_project__contains=belong_project).filter(
+    #             belong_module__module_name__contains=belong_module)
+    #         if name is not '':
+    #             obj = obj.filter(Api_name__contains=name)
+	#
+    #     else:
+    #         if belong_project != 'All':
+    #             obj = obj.filter(belong_project__contains=belong_project)
+    #         elif belong_module != '请选择':
+    #             obj = obj.filter(belong_module__module_name__contains=belong_module)
+    #         else:
+    #             obj = obj.filter(Api_name__contains=name) if name is not '' else obj.filter(Api_author__contains=user)
     elif url != '/api/env_list/' and url != '/api/debugtalk_list/':
-        obj = obj.filter(type__exact=1) if url == '/api/test_list/' else obj.filter(type__exact=2)
+        obj = obj.filter(type__exact=1) if url == '/api/test_list/' or url == '/api/api_list/' else obj.filter(type__exact=2)
 
         if belong_project != 'All' and belong_module != '请选择':
             obj = obj.filter(belong_project__contains=belong_project).filter(

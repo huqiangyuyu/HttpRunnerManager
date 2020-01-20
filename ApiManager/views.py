@@ -13,11 +13,11 @@ from dwebsocket import accept_websocket
 
 from ApiManager import separator
 from ApiManager.models import ProjectInfo, ModuleInfo, TestCaseInfo, UserInfo, EnvInfo, TestReports, DebugTalk, \
-    TestSuite
+    TestSuite,ApiInfo
 from ApiManager.tasks import main_hrun
 from ApiManager.utils.common import module_info_logic, project_info_logic, case_info_logic, config_info_logic, \
     set_filter_session, get_ajax_msg, register_info_logic, task_logic, load_modules, upload_file_logic, \
-    init_filter_session, get_total_values, timestamp_to_datetime
+    init_filter_session, get_total_values, timestamp_to_datetime,api_info_logic
 from ApiManager.utils.operation import env_data_logic, del_module_data, del_project_data, del_test_data, copy_test_data, \
     del_report_data, add_suite_data, copy_suite_data, del_suite_data, edit_suite_data, add_test_reports
 from ApiManager.utils.pagination import get_pager_info
@@ -191,7 +191,7 @@ def add_api(request):
     account = request.session["now_account"]
     if request.is_ajax():
         testcase_info = json.loads(request.body.decode('utf-8'))
-        msg = case_info_logic(**testcase_info)
+        msg = api_info_logic(**testcase_info)
         return HttpResponse(get_ajax_msg(msg, '/api/api_list/1/'))
     elif request.method == 'GET':
         manage_info = {
@@ -399,28 +399,29 @@ def test_list(request, id):
         return render_to_response('test_list.html', manage_info)
 
 @login_check
-def test_api(request, id):
+def api_list(request, id):
     """
-    用例列表
+    接口列表
     :param request:
     :param id: str or int：当前页
     :return:
     """
 
     account = request.session["now_account"]
+    tag = 'api'
     if request.is_ajax():
         test_info = json.loads(request.body.decode('utf-8'))
 
         if test_info.get('mode') == 'del':
-            msg = del_test_data(test_info.pop('id'))
+            msg = del_test_data(test_info.pop('id'),tag)
         elif test_info.get('mode') == 'copy':
-            msg = copy_test_data(test_info.get('data').pop('index'), test_info.get('data').pop('name'))
+            msg = copy_test_data(test_info.get('data').pop('index'), test_info.get('data').pop('name'),tag)
         return HttpResponse(get_ajax_msg(msg, 'ok'))
 
     else:
         filter_query = set_filter_session(request)
         test_list = get_pager_info(
-            TestCaseInfo, filter_query, '/api/test_list/', id)
+            ApiInfo, filter_query, '/api/api_list/', id)
         manage_info = {
             'account': account,
             'test': test_list[1],
@@ -429,7 +430,7 @@ def test_api(request, id):
             'env': EnvInfo.objects.all().order_by('-create_time'),
             'project': ProjectInfo.objects.all().order_by('-update_time')
         }
-        return render_to_response('test_list.html', manage_info)
+        return render_to_response('api_list.html', manage_info)
 
 @login_check
 def config_list(request, id):
@@ -489,6 +490,33 @@ def edit_case(request, id=None):
     }
     return render_to_response('edit_case.html', manage_info)
 
+
+@login_check
+def edit_api(request, id=None):
+    """
+    编辑用例
+    :param request:
+    :param id:
+    :return:
+    """
+
+    account = request.session["now_account"]
+    if request.is_ajax():
+        testcase_lists = json.loads(request.body.decode('utf-8'))
+        msg = case_info_logic(type=False, **testcase_lists)
+        return HttpResponse(get_ajax_msg(msg, '/api/test_list/1/'))
+
+    test_info = TestCaseInfo.objects.get_case_by_id(id)
+    request = eval(test_info[0].request)
+    include = eval(test_info[0].include)
+    manage_info = {
+        'account': account,
+        'info': test_info[0],
+        'request': request['test'],
+        'include': include,
+        'project': ProjectInfo.objects.all().values('project_name').order_by('-create_time')
+    }
+    return render_to_response('edit_case.html', manage_info)
 
 @login_check
 def edit_config(request, id=None):

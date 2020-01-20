@@ -1441,3 +1441,1534 @@ django.template.exceptions.TemplateDoesNotExist: add_api.html
 2020-01-14 21:51:45,126 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34404
 2020-01-14 21:52:09,862 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_config/ HTTP/1.1" 200 24780
 2020-01-14 21:52:32,362 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34404
+2020-01-20 09:59:08,808 [django.request:93] [base:get_response] [WARNING]- Not Found: /
+2020-01-20 09:59:08,818 [django.server:124] [basehttp:log_message] [WARNING]- "GET / HTTP/1.1" 404 2365
+2020-01-20 09:59:08,999 [django.server:124] [basehttp:log_message] [INFO]- "GET /favicon.ico HTTP/1.1" 302 0
+2020-01-20 09:59:09,031 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/img/favicon.ico HTTP/1.1" 200 67646
+2020-01-20 09:59:59,787 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/index/ HTTP/1.1" 302 0
+2020-01-20 09:59:59,815 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/login/ HTTP/1.1" 200 3876
+2020-01-20 10:00:03,149 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/login/ HTTP/1.1" 200 3876
+2020-01-20 10:00:04,748 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/login/ HTTP/1.1" 200 3876
+2020-01-20 10:00:08,373 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/login/ HTTP/1.1" 200 3876
+2020-01-20 10:00:12,967 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/login/ HTTP/1.1" 200 3876
+2020-01-20 10:00:16,082 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/login/ HTTP/1.1" 302 0
+2020-01-20 10:00:16,359 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/index/ HTTP/1.1" 200 18569
+2020-01-20 10:00:16,504 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/common.css HTTP/1.1" 304 0
+2020-01-20 10:00:16,508 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/js/commons.js HTTP/1.1" 304 0
+2020-01-20 10:00:16,510 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/admin.css HTTP/1.1" 304 0
+2020-01-20 10:00:16,512 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/js/app.js HTTP/1.1" 304 0
+2020-01-20 10:04:26,942 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34404
+2020-01-20 10:10:08,796 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 9
+2020-01-20 10:10:10,203 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 10:10:10,212 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 26
+2020-01-20 10:10:35,640 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 9
+2020-01-20 10:10:38,403 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 17
+2020-01-20 10:10:38,583 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 30899
+2020-01-20 10:10:38,936 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 10:11:21,984 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_api/1/ HTTP/1.1" 200 30899
+2020-01-20 10:11:22,307 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 10:11:25,322 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 30899
+2020-01-20 10:11:25,563 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 10:11:29,123 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_case/ HTTP/1.1" 200 34404
+2020-01-20 10:12:38,734 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34404
+2020-01-20 10:21:33,645 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34404
+2020-01-20 10:21:39,000 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 9
+2020-01-20 10:21:39,857 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 10:21:39,892 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 42
+2020-01-20 10:21:50,595 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 9
+2020-01-20 10:21:52,485 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 17
+2020-01-20 10:21:52,960 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 33370
+2020-01-20 10:21:53,399 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 10:22:53,323 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34404
+2020-01-20 10:22:53,369 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34404
+2020-01-20 10:22:53,420 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/add_api/ HTTP/1.1" 500 59
+2020-01-20 10:22:55,858 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 9
+2020-01-20 10:22:56,882 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 10:22:56,887 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 57
+2020-01-20 10:23:06,030 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 9
+2020-01-20 10:30:45,170 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 42
+2020-01-20 10:30:52,622 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 17
+2020-01-20 10:30:53,132 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 35851
+2020-01-20 10:30:53,508 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 10:31:06,013 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34404
+2020-01-20 10:31:22,064 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 9
+2020-01-20 10:31:23,944 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 17
+2020-01-20 10:31:24,359 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 38323
+2020-01-20 10:31:24,646 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 10:31:41,347 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34404
+2020-01-20 10:32:14,360 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 9
+2020-01-20 10:32:14,350 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/add_case/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 175, in add_case
+    msg = case_info_logic(**testcase_info)
+  File "D:/HttpRunnerManager\ApiManager\utils\common.py", line 314, in case_info_logic
+    return add_case_data(type, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\utils\operation.py", line 144, in add_case_data
+    belong_module = ModuleInfo.objects.get_module_name(module, type=False)
+  File "D:/HttpRunnerManager\ApiManager\managers.py", line 87, in get_module_name
+    return self.get(id=module_name)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 403, in get
+    self.model._meta.object_name
+ApiManager.models.DoesNotExist: ModuleInfo matching query does not exist.
+2020-01-20 10:32:15,296 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/add_case/ HTTP/1.1" 500 23142
+2020-01-20 10:32:58,640 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 17
+2020-01-20 10:32:59,115 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 40804
+2020-01-20 10:32:59,524 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 10:33:26,479 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34404
+2020-01-20 10:34:07,221 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34404
+2020-01-20 10:34:17,092 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 9
+2020-01-20 10:34:21,475 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 42
+2020-01-20 10:34:27,570 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 17
+2020-01-20 10:34:28,084 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 43282
+2020-01-20 10:34:28,473 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 10:37:55,367 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34404
+2020-01-20 10:38:05,277 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 9
+2020-01-20 10:39:08,696 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 17
+2020-01-20 10:39:08,959 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 45768
+2020-01-20 10:39:09,077 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/common.css HTTP/1.1" 200 1077
+2020-01-20 10:39:09,080 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/js/commons.js HTTP/1.1" 200 13699
+2020-01-20 10:39:09,083 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/admin.css HTTP/1.1" 200 20853
+2020-01-20 10:39:09,088 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/js/app.js HTTP/1.1" 200 21264
+2020-01-20 10:39:30,178 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 10:39:33,544 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 45768
+2020-01-20 10:39:54,558 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 10:39:54,618 [django.server:124] [basehttp:log_message] [INFO]- "GET /favicon.ico HTTP/1.1" 302 0
+2020-01-20 10:39:54,666 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/img/favicon.ico HTTP/1.1" 200 67646
+2020-01-20 10:41:49,448 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 45768
+2020-01-20 10:41:49,493 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/js/commons.js HTTP/1.1" 304 0
+2020-01-20 10:42:07,358 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/index/ HTTP/1.1" 200 18569
+2020-01-20 10:47:52,483 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/index/ HTTP/1.1" 200 18569
+2020-01-20 10:47:52,615 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/js/commons.js HTTP/1.1" 304 0
+2020-01-20 10:57:21,608 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/index/ HTTP/1.1" 200 18569
+2020-01-20 10:57:21,663 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/js/commons.js HTTP/1.1" 304 0
+2020-01-20 10:57:46,304 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/js/app.js HTTP/1.1" 200 21264
+2020-01-20 10:59:41,964 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/index/ HTTP/1.1" 200 18569
+2020-01-20 10:59:42,059 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/admin.css HTTP/1.1" 200 20853
+2020-01-20 10:59:42,194 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/common.css HTTP/1.1" 200 1077
+2020-01-20 10:59:42,198 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/js/app.js HTTP/1.1" 200 21264
+2020-01-20 10:59:42,204 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/js/commons.js HTTP/1.1" 200 13699
+2020-01-20 11:00:30,184 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/index/ HTTP/1.1" 200 18569
+2020-01-20 11:01:11,508 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/index/ HTTP/1.1" 200 18569
+2020-01-20 11:14:15,385 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/index/ HTTP/1.1" 200 18569
+2020-01-20 11:14:15,516 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/js/commons.js HTTP/1.1" 304 0
+2020-01-20 11:17:18,058 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/index/ HTTP/1.1" 200 18547
+2020-01-20 11:17:18,129 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/amazeui.min.css HTTP/1.1" 200 273972
+2020-01-20 11:17:25,599 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/index/ HTTP/1.1" 200 18547
+2020-01-20 11:17:25,654 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/amazeui.min.css HTTP/1.1" 304 0
+2020-01-20 11:17:34,073 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/module_list/1/ HTTP/1.1" 200 28331
+2020-01-20 11:17:34,120 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/amazeui.min.css HTTP/1.1" 304 0
+2020-01-20 11:17:45,182 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34382
+2020-01-20 11:17:45,217 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/amazeui.min.css HTTP/1.1" 304 0
+2020-01-20 11:17:49,533 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 45746
+2020-01-20 11:17:49,848 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 11:17:52,782 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/module_list/1/ HTTP/1.1" 200 28331
+2020-01-20 11:17:55,272 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34382
+2020-01-20 11:17:55,315 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/amazeui.min.css HTTP/1.1" 304 0
+2020-01-20 11:18:08,370 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34405
+2020-01-20 11:23:16,338 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/index/ HTTP/1.1" 200 18547
+2020-01-20 11:23:16,415 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/js/commons.js HTTP/1.1" 304 0
+2020-01-20 11:23:16,422 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/amazeui.min.css HTTP/1.1" 200 255214
+2020-01-20 11:23:16,701 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 1746
+2020-01-20 11:23:16,740 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 404 1743
+2020-01-20 11:23:16,774 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.ttf?v=4.6.3 HTTP/1.1" 404 1740
+2020-01-20 11:23:20,566 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/module_list/1/ HTTP/1.1" 200 28331
+2020-01-20 11:23:20,607 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/amazeui.min.css HTTP/1.1" 304 0
+2020-01-20 11:23:20,799 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 1746
+2020-01-20 11:23:20,876 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 404 1743
+2020-01-20 11:23:20,911 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.ttf?v=4.6.3 HTTP/1.1" 404 1740
+2020-01-20 11:23:24,187 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34382
+2020-01-20 11:23:24,377 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 1746
+2020-01-20 11:23:24,471 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 404 1743
+2020-01-20 11:23:24,510 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.ttf?v=4.6.3 HTTP/1.1" 404 1740
+2020-01-20 11:23:26,182 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 404 1743
+2020-01-20 11:23:26,230 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.ttf?v=4.6.3 HTTP/1.1" 404 1740
+2020-01-20 11:23:41,982 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34382
+2020-01-20 11:23:42,015 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/amazeui.min.css HTTP/1.1" 304 0
+2020-01-20 11:23:42,201 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 1746
+2020-01-20 11:23:42,291 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 404 1743
+2020-01-20 11:23:42,324 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.ttf?v=4.6.3 HTTP/1.1" 404 1740
+2020-01-20 11:23:50,873 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 9
+2020-01-20 11:24:00,928 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/amazeui.min.css HTTP/1.1" 304 0
+2020-01-20 11:25:00,805 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/add_api/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 194, in add_api
+    msg = api_info_logic(**testcase_info)
+  File "D:/HttpRunnerManager\ApiManager\utils\common.py", line 408, in api_info_logic
+    return add_api_data(type, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\utils\operation.py", line 181, in add_api_data
+    module = ApiInfo.get('module')
+AttributeError: type object 'ApiInfo' has no attribute 'get'
+2020-01-20 11:25:00,943 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/add_api/ HTTP/1.1" 500 22602
+2020-01-20 11:25:06,735 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 9
+2020-01-20 11:25:08,153 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 11:25:08,167 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 168
+2020-01-20 11:25:54,812 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34382
+2020-01-20 11:25:54,860 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/amazeui.min.css HTTP/1.1" 304 0
+2020-01-20 11:25:55,061 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 1746
+2020-01-20 11:25:55,145 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 404 1743
+2020-01-20 11:25:55,207 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.ttf?v=4.6.3 HTTP/1.1" 404 1740
+2020-01-20 11:26:00,164 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_api/1/ HTTP/1.1" 200 45746
+2020-01-20 11:26:00,416 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 1746
+2020-01-20 11:26:00,457 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 11:26:00,520 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 404 1743
+2020-01-20 11:26:00,563 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.ttf?v=4.6.3 HTTP/1.1" 404 1740
+2020-01-20 11:26:11,913 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/test_list/1/ HTTP/1.1" 200 2
+2020-01-20 11:26:12,193 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_api/1/ HTTP/1.1" 200 43265
+2020-01-20 11:26:12,442 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 1746
+2020-01-20 11:26:12,486 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 11:26:12,540 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 404 1743
+2020-01-20 11:26:12,571 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.ttf?v=4.6.3 HTTP/1.1" 404 1740
+2020-01-20 11:26:14,687 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/test_list/1/ HTTP/1.1" 200 2
+2020-01-20 11:26:14,905 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_api/1/ HTTP/1.1" 200 39661
+2020-01-20 11:26:14,952 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/amazeui.min.css HTTP/1.1" 304 0
+2020-01-20 11:26:15,147 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 1746
+2020-01-20 11:26:15,184 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 11:26:15,224 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 404 1743
+2020-01-20 11:26:15,255 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.ttf?v=4.6.3 HTTP/1.1" 404 1740
+2020-01-20 11:26:17,055 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/test_list/1/ HTTP/1.1" 200 2
+2020-01-20 11:26:17,325 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_api/1/ HTTP/1.1" 200 37189
+2020-01-20 11:26:17,609 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 1746
+2020-01-20 11:26:17,647 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 11:26:17,704 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 404 1743
+2020-01-20 11:26:17,739 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.ttf?v=4.6.3 HTTP/1.1" 404 1740
+2020-01-20 11:26:19,250 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/test_list/1/ HTTP/1.1" 200 2
+2020-01-20 11:26:19,425 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_api/1/ HTTP/1.1" 200 34718
+2020-01-20 11:26:19,635 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 1746
+2020-01-20 11:26:19,677 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 11:26:19,719 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 404 1743
+2020-01-20 11:26:19,761 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.ttf?v=4.6.3 HTTP/1.1" 404 1740
+2020-01-20 11:26:21,828 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/test_list/1/ HTTP/1.1" 200 2
+2020-01-20 11:26:21,994 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_api/1/ HTTP/1.1" 200 32237
+2020-01-20 11:26:22,213 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 1746
+2020-01-20 11:26:22,275 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 404 1743
+2020-01-20 11:26:22,278 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 11:26:22,328 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.ttf?v=4.6.3 HTTP/1.1" 404 1740
+2020-01-20 11:26:23,693 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/test_list/1/ HTTP/1.1" 200 2
+2020-01-20 11:26:23,849 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_api/1/ HTTP/1.1" 200 29765
+2020-01-20 11:26:24,099 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 1746
+2020-01-20 11:26:24,150 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 404 1743
+2020-01-20 11:26:24,182 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 11:26:24,212 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.ttf?v=4.6.3 HTTP/1.1" 404 1740
+2020-01-20 11:26:27,391 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/test_list/1/ HTTP/1.1" 200 2
+2020-01-20 11:26:27,574 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_api/1/ HTTP/1.1" 200 27289
+2020-01-20 11:26:27,760 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 1746
+2020-01-20 11:26:27,796 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 404 1743
+2020-01-20 11:26:27,838 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.ttf?v=4.6.3 HTTP/1.1" 404 1740
+2020-01-20 11:26:27,860 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 11:26:35,118 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/test_list/1/ HTTP/1.1" 200 2
+2020-01-20 11:26:35,252 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_api/1/ HTTP/1.1" 200 24811
+2020-01-20 11:26:35,471 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 1746
+2020-01-20 11:26:35,506 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 404 1743
+2020-01-20 11:26:35,559 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.ttf?v=4.6.3 HTTP/1.1" 404 1740
+2020-01-20 11:26:35,569 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 11:26:52,079 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/amazeui.min.css HTTP/1.1" 304 0
+2020-01-20 11:27:02,297 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/project_list/1/ HTTP/1.1" 200 29537
+2020-01-20 11:27:02,443 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/common.css HTTP/1.1" 200 1077
+2020-01-20 11:27:02,454 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/admin.css HTTP/1.1" 200 20853
+2020-01-20 11:27:02,476 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/js/app.js HTTP/1.1" 200 21264
+2020-01-20 11:27:02,484 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/amazeui.min.css HTTP/1.1" 200 255214
+2020-01-20 11:27:02,491 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/js/commons.js HTTP/1.1" 200 13699
+2020-01-20 11:27:03,517 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 1746
+2020-01-20 11:27:03,617 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 404 1743
+2020-01-20 11:27:03,678 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.ttf?v=4.6.3 HTTP/1.1" 404 1740
+2020-01-20 11:27:40,233 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 1746
+2020-01-20 14:09:45,820 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/index/ HTTP/1.1" 200 18547
+2020-01-20 14:09:45,958 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/css/amazeui.min.css HTTP/1.1" 304 0
+2020-01-20 14:09:46,027 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/js/commons.js HTTP/1.1" 304 0
+2020-01-20 14:10:06,855 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 404 1746
+2020-01-20 14:10:06,909 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.woff?v=4.6.3 HTTP/1.1" 404 1743
+2020-01-20 14:10:06,941 [django.server:124] [basehttp:log_message] [WARNING]- "GET /static/assets/fonts/fontawesome-webfont.ttf?v=4.6.3 HTTP/1.1" 404 1740
+2020-01-20 14:10:41,804 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/index/ HTTP/1.1" 200 18570
+2020-01-20 14:13:53,251 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/index/ HTTP/1.1" 200 18570
+2020-01-20 14:14:18,343 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/index/ HTTP/1.1" 200 18570
+2020-01-20 14:15:04,665 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34405
+2020-01-20 14:15:07,936 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_api/1/ HTTP/1.1" 200 24834
+2020-01-20 14:15:08,223 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 14:16:13,254 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34406
+2020-01-20 14:16:18,359 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 9
+2020-01-20 14:16:25,859 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/add_api/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 194, in add_api
+    msg = api_info_logic(**testcase_info)
+  File "D:/HttpRunnerManager\ApiManager\utils\common.py", line 408, in api_info_logic
+    return add_api_data(type, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\utils\operation.py", line 181, in add_api_data
+    module = ApiInfo.get('module')
+AttributeError: type object 'ApiInfo' has no attribute 'get'
+2020-01-20 14:16:25,997 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/add_api/ HTTP/1.1" 500 22602
+2020-01-20 14:18:28,927 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/add_api/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 194, in add_api
+    msg = api_info_logic(**testcase_info)
+  File "D:/HttpRunnerManager\ApiManager\utils\common.py", line 408, in api_info_logic
+    return add_api_data(type, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\utils\operation.py", line 181, in add_api_data
+    module = ApiInfo.get('module')
+AttributeError: type object 'ApiInfo' has no attribute 'get'
+2020-01-20 14:18:29,065 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/add_api/ HTTP/1.1" 500 22602
+2020-01-20 14:18:31,496 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34405
+2020-01-20 14:18:41,084 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 9
+2020-01-20 14:18:42,536 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/add_api/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 194, in add_api
+    msg = api_info_logic(**testcase_info)
+  File "D:/HttpRunnerManager\ApiManager\utils\common.py", line 408, in api_info_logic
+    return add_api_data(type, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\utils\operation.py", line 181, in add_api_data
+    module = ApiInfo.get('module')
+AttributeError: type object 'ApiInfo' has no attribute 'get'
+2020-01-20 14:18:42,669 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/add_api/ HTTP/1.1" 500 22602
+2020-01-20 14:34:51,352 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_api/1/ HTTP/1.1" 200 24834
+2020-01-20 14:34:51,428 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/js/commons.js HTTP/1.1" 304 0
+2020-01-20 14:34:51,648 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 14:34:59,416 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34405
+2020-01-20 14:35:02,182 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_api/1/ HTTP/1.1" 200 24834
+2020-01-20 14:35:02,444 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 14:35:19,624 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_api/1/ HTTP/1.1" 200 24834
+2020-01-20 14:35:19,883 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 15:02:56,266 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/edit_case/10/ HTTP/1.1" 200 38068
+2020-01-20 15:03:10,705 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/js/commons.js HTTP/1.1" 304 0
+2020-01-20 15:04:40,233 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 24834
+2020-01-20 15:04:40,575 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 15:04:42,540 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/edit_case/10/ HTTP/1.1" 200 38068
+2020-01-20 15:04:54,367 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/test_api/1/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 424, in test_api
+    ApiInfo, filter_query, '/api/test_list/', id)
+  File "D:/HttpRunnerManager\ApiManager\utils\pagination.py", line 137, in get_pager_info
+    obj = obj.filter(type__exact=1) if url == '/api/test_list/' else obj.filter(type__exact=2)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1153, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1015, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1379, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'type' into field. Choices are: Api_author, Api_include, Api_name, Api_request, Api_type, belong_module, belong_module_id, belong_project, create_time, id, update_time
+2020-01-20 15:04:55,173 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/test_api/1/ HTTP/1.1" 500 132489
+2020-01-20 15:05:02,320 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 24834
+2020-01-20 15:05:02,542 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 15:05:04,640 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/test_api/1/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 424, in test_api
+    ApiInfo, filter_query, '/api/test_list/', id)
+  File "D:/HttpRunnerManager\ApiManager\utils\pagination.py", line 137, in get_pager_info
+    obj = obj.filter(type__exact=1) if url == '/api/test_list/' else obj.filter(type__exact=2)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1153, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1015, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1379, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'type' into field. Choices are: Api_author, Api_include, Api_name, Api_request, Api_type, belong_module, belong_module_id, belong_project, create_time, id, update_time
+2020-01-20 15:05:05,027 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/test_api/1/ HTTP/1.1" 500 132488
+2020-01-20 15:05:07,185 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 15:13:55,246 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 24834
+2020-01-20 15:13:55,551 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 15:14:45,029 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 24834
+2020-01-20 15:14:45,349 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 15:17:56,584 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/test_api/1/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 424, in test_api
+    ApiInfo, filter_query, '/api/test_list/', id)
+  File "D:/HttpRunnerManager\ApiManager\utils\pagination.py", line 137, in get_pager_info
+    obj = obj.filter(type__exact=1) if url == '/api/test_list/' else obj.filter(type__exact=2)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1153, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1015, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1379, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'type' into field. Choices are: Api_author, Api_include, Api_name, Api_request, Api_type, belong_module, belong_module_id, belong_project, create_time, id, update_time
+2020-01-20 15:17:57,864 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/test_api/1/ HTTP/1.1" 500 132488
+2020-01-20 15:18:08,006 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 15:18:09,150 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 24834
+2020-01-20 15:18:09,400 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 15:19:28,577 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 15:19:32,485 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 24834
+2020-01-20 15:19:32,827 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 15:20:03,956 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/test_api/1/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 424, in test_api
+    ApiInfo, filter_query, '/api/test_list/', id)
+  File "D:/HttpRunnerManager\ApiManager\utils\pagination.py", line 137, in get_pager_info
+    obj = obj.filter(type__exact=1) if url == '/api/test_list/' else obj.filter(type__exact=2)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1153, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1015, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1379, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'type' into field. Choices are: Api_author, Api_include, Api_name, Api_request, Api_type, belong_module, belong_module_id, belong_project, create_time, id, update_time
+2020-01-20 15:20:04,295 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/test_api/1/ HTTP/1.1" 500 132488
+2020-01-20 15:20:39,707 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 15:20:41,977 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34405
+2020-01-20 15:20:51,132 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 9
+2020-01-20 15:20:52,607 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/add_api/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 194, in add_api
+    msg = api_info_logic(**testcase_info)
+  File "D:/HttpRunnerManager\ApiManager\utils\common.py", line 408, in api_info_logic
+    return add_api_data(type, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\utils\operation.py", line 191, in add_api_data
+    if api_opt.get_api_name(name, module, project) < 1:
+AttributeError: 'TestCaseInfoManager' object has no attribute 'get_api_name'
+2020-01-20 15:20:52,734 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/add_api/ HTTP/1.1" 500 22663
+2020-01-20 15:23:25,364 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/add_api/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 194, in add_api
+    msg = api_info_logic(**testcase_info)
+  File "D:/HttpRunnerManager\ApiManager\utils\common.py", line 408, in api_info_logic
+    return add_api_data(type, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\utils\operation.py", line 191, in add_api_data
+    if api_opt.get_api_name(name, module, project) < 1:
+AttributeError: 'TestCaseInfoManager' object has no attribute 'get_api_name'
+2020-01-20 15:23:25,707 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/add_api/ HTTP/1.1" 500 22663
+2020-01-20 15:23:57,735 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/add_api/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 194, in add_api
+    msg = api_info_logic(**testcase_info)
+  File "D:/HttpRunnerManager\ApiManager\utils\common.py", line 408, in api_info_logic
+    return add_api_data(type, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\utils\operation.py", line 191, in add_api_data
+    if api_opt.get_api_name(name, module, project) < 1:
+AttributeError: 'TestCaseInfoManager' object has no attribute 'get_api_name'
+2020-01-20 15:23:58,068 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/add_api/ HTTP/1.1" 500 22663
+2020-01-20 15:27:37,755 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/add_api/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 194, in add_api
+    msg = api_info_logic(**testcase_info)
+  File "D:/HttpRunnerManager\ApiManager\utils\common.py", line 408, in api_info_logic
+    return add_api_data(type, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\utils\operation.py", line 191, in add_api_data
+    if api_opt.get_api_name(name, module, project) < 1:
+  File "D:/HttpRunnerManager\ApiManager\managers.py", line 176, in get_api_name
+    return self.filter(belong_module__id=module_name).filter(name__exact=name).filter(
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1153, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1015, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1379, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'name' into field. Choices are: Api_author, Api_include, Api_name, Api_request, Api_type, belong_module, belong_module_id, belong_project, create_time, id, update_time
+2020-01-20 15:27:37,760 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/add_api/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 194, in add_api
+    msg = api_info_logic(**testcase_info)
+  File "D:/HttpRunnerManager\ApiManager\utils\common.py", line 408, in api_info_logic
+    return add_api_data(type, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\utils\operation.py", line 191, in add_api_data
+    if api_opt.get_api_name(name, module, project) < 1:
+  File "D:/HttpRunnerManager\ApiManager\managers.py", line 176, in get_api_name
+    return self.filter(belong_module__id=module_name).filter(name__exact=name).filter(
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1153, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1015, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1379, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'name' into field. Choices are: Api_author, Api_include, Api_name, Api_request, Api_type, belong_module, belong_module_id, belong_project, create_time, id, update_time
+2020-01-20 15:27:38,081 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/add_api/ HTTP/1.1" 500 24477
+2020-01-20 15:27:38,084 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/add_api/ HTTP/1.1" 500 24481
+2020-01-20 15:34:00,305 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/add_api/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 194, in add_api
+    msg = api_info_logic(**testcase_info)
+  File "D:/HttpRunnerManager\ApiManager\utils\common.py", line 408, in api_info_logic
+    return add_api_data(type, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\utils\operation.py", line 191, in add_api_data
+    if api_opt.get_api_name(name, module, project) < 1:
+  File "D:/HttpRunnerManager\ApiManager\managers.py", line 176, in get_api_name
+    return self.filter(belong_module__id=module_name).filter(name__exact=name).filter(
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1153, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1015, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1379, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'name' into field. Choices are: Api_author, Api_include, Api_name, Api_request, Api_type, belong_module, belong_module_id, belong_project, create_time, id, update_time
+2020-01-20 15:34:00,393 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/add_api/ HTTP/1.1" 500 24481
+2020-01-20 15:36:37,092 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/add_api/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 194, in add_api
+    msg = api_info_logic(**testcase_info)
+  File "D:/HttpRunnerManager\ApiManager\utils\common.py", line 408, in api_info_logic
+    return add_api_data(type, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\utils\operation.py", line 191, in add_api_data
+    if api_opt.get_api_name(name, module, project) < 1:
+  File "D:/HttpRunnerManager\ApiManager\managers.py", line 176, in get_api_name
+    return self.filter(belong_module__id=module_name).filter(name__exact=name).filter(
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1153, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1015, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1379, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'name' into field. Choices are: Api_author, Api_include, Api_name, Api_request, Api_type, belong_module, belong_module_id, belong_project, create_time, id, update_time
+2020-01-20 15:36:37,170 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/add_api/ HTTP/1.1" 500 24481
+2020-01-20 15:37:49,995 [django.request:93] [base:get_response] [WARNING]- Not Found: /
+2020-01-20 15:37:50,005 [django.server:124] [basehttp:log_message] [WARNING]- "GET / HTTP/1.1" 404 2365
+2020-01-20 15:38:13,248 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/add_api/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 194, in add_api
+    msg = api_info_logic(**testcase_info)
+  File "D:/HttpRunnerManager\ApiManager\utils\common.py", line 408, in api_info_logic
+    return add_api_data(type, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\utils\operation.py", line 191, in add_api_data
+    if api_opt.get_api_name(Api_name, module, project) < 1:
+  File "D:/HttpRunnerManager\ApiManager\managers.py", line 176, in get_api_name
+    return self.filter(belong_module__id=module_name).filter(name__exact=name).filter(
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1153, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1015, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1379, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'name' into field. Choices are: Api_author, Api_include, Api_name, Api_request, Api_type, belong_module, belong_module_id, belong_project, create_time, id, update_time
+2020-01-20 15:38:13,482 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/add_api/ HTTP/1.1" 500 24481
+2020-01-20 15:39:42,804 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_api/ HTTP/1.1" 200 16
+2020-01-20 15:39:42,815 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_api/ HTTP/1.1" 200 42
+2020-01-20 15:39:42,868 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/api_list/1/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 12, in process
+    fun = getattr(view, fun)
+AttributeError: module 'ApiManager.views' has no attribute 'api_list'
+2020-01-20 15:39:43,431 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/api_list/1/ HTTP/1.1" 500 78754
+2020-01-20 15:52:38,730 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34405
+2020-01-20 15:52:38,826 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/js/commons.js HTTP/1.1" 304 0
+2020-01-20 15:52:50,037 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 9
+2020-01-20 15:52:56,240 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_api/ HTTP/1.1" 200 17
+2020-01-20 15:52:56,430 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 24834
+2020-01-20 15:52:56,829 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 15:53:07,476 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 24834
+2020-01-20 15:53:07,744 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 15:53:09,573 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/config_list/1/ HTTP/1.1" 200 19498
+2020-01-20 15:53:09,780 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 15:53:12,456 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/periodictask/1/ HTTP/1.1" 200 16532
+2020-01-20 15:53:17,919 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/module_list/1/ HTTP/1.1" 200 28354
+2020-01-20 15:56:07,793 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/test_api/1/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 12, in process
+    fun = getattr(view, fun)
+AttributeError: module 'ApiManager.views' has no attribute 'test_api'
+2020-01-20 15:56:09,002 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/test_api/1/ HTTP/1.1" 500 78915
+2020-01-20 15:59:24,705 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 24834
+2020-01-20 15:59:25,154 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 15:59:34,892 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/test_api/1/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 12, in process
+    fun = getattr(view, fun)
+AttributeError: module 'ApiManager.views' has no attribute 'test_api'
+2020-01-20 15:59:35,670 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/test_api/1/ HTTP/1.1" 500 78913
+2020-01-20 16:01:11,952 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 16:04:34,546 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/test_api/1/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 12, in process
+    fun = getattr(view, fun)
+AttributeError: module 'ApiManager.views' has no attribute 'test_api'
+2020-01-20 16:04:34,842 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/test_api/1/ HTTP/1.1" 500 78887
+2020-01-20 16:05:15,845 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 16:05:16,764 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 24834
+2020-01-20 16:05:17,056 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 16:05:36,520 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/api_list/1/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 424, in api_list
+    ApiInfo, filter_query, '/api/test_list/', id)
+  File "D:/HttpRunnerManager\ApiManager\utils\pagination.py", line 137, in get_pager_info
+    obj = obj.filter(type__exact=1) if url == '/api/test_list/' else obj.filter(type__exact=2)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1153, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1015, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1379, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'type' into field. Choices are: Api_author, Api_include, Api_name, Api_request, Api_type, belong_module, belong_module_id, belong_project, create_time, id, update_time
+2020-01-20 16:05:36,728 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/api_list/1/ HTTP/1.1" 500 132694
+2020-01-20 16:08:36,758 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 24834
+2020-01-20 16:08:36,803 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/test_list/1/ HTTP/1.1" 500 59
+2020-01-20 16:08:36,820 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 24834
+2020-01-20 16:08:37,289 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 16:22:53,393 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/api_list/1/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 433, in api_list
+    return render_to_response('test_list.html', manage_info)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 703, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "D:/HttpRunnerManager\ApiManager\templatetags\custom_tags.py", line 27, in convert_eval
+    return update_include(eval(value))
+TypeError: eval() arg 1 must be a string, bytes or code object
+2020-01-20 16:22:53,875 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/api_list/1/ HTTP/1.1" 500 215431
+2020-01-20 16:25:09,025 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 16:25:13,760 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/api_list/1/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 433, in api_list
+    return render_to_response('api_list.html', manage_info)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 703, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "D:/HttpRunnerManager\ApiManager\templatetags\custom_tags.py", line 27, in convert_eval
+    return update_include(eval(value))
+TypeError: eval() arg 1 must be a string, bytes or code object
+2020-01-20 16:25:14,126 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/api_list/1/ HTTP/1.1" 500 215401
+2020-01-20 16:25:33,890 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 16:26:23,573 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 24834
+2020-01-20 16:26:23,678 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/js/commons.js HTTP/1.1" 304 0
+2020-01-20 16:26:23,939 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 16:28:55,475 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/api_list/1/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 433, in api_list
+    return render_to_response('api_list.html', manage_info)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 703, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "D:/HttpRunnerManager\ApiManager\templatetags\custom_tags.py", line 27, in convert_eval
+    return update_include(eval(value))
+TypeError: eval() arg 1 must be a string, bytes or code object
+2020-01-20 16:28:55,774 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/api_list/1/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 433, in api_list
+    return render_to_response('api_list.html', manage_info)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 703, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "D:/HttpRunnerManager\ApiManager\templatetags\custom_tags.py", line 27, in convert_eval
+    return update_include(eval(value))
+TypeError: eval() arg 1 must be a string, bytes or code object
+2020-01-20 16:28:58,541 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/api_list/1/ HTTP/1.1" 500 215401
+2020-01-20 16:28:58,883 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/api_list/1/ HTTP/1.1" 500 59
+2020-01-20 16:28:59,044 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 24834
+2020-01-20 16:28:59,625 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/api_list/1/ HTTP/1.1" 500 215401
+2020-01-20 16:28:59,639 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/api_list/1/ HTTP/1.1" 500 59
+2020-01-20 16:28:59,681 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 16:30:55,958 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 24834
+2020-01-20 16:30:55,925 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/api_list/1/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 433, in api_list
+    return render_to_response('api_list.html', manage_info)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 703, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "D:/HttpRunnerManager\ApiManager\templatetags\custom_tags.py", line 27, in convert_eval
+    return update_include(eval(value))
+TypeError: eval() arg 1 must be a string, bytes or code object
+2020-01-20 16:30:55,973 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/test_list/1/ HTTP/1.1" 500 59
+2020-01-20 16:30:57,928 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/api_list/1/ HTTP/1.1" 500 215401
+2020-01-20 16:30:57,952 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/api_list/1/ HTTP/1.1" 500 59
+2020-01-20 16:30:58,156 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/api_list/1/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 433, in api_list
+    return render_to_response('api_list.html', manage_info)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 703, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "D:/HttpRunnerManager\ApiManager\templatetags\custom_tags.py", line 27, in convert_eval
+    return update_include(eval(value))
+TypeError: eval() arg 1 must be a string, bytes or code object
+2020-01-20 16:30:59,797 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/api_list/1/ HTTP/1.1" 500 215401
+2020-01-20 16:31:01,954 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 24834
+2020-01-20 16:31:02,231 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 16:31:04,182 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/api_list/1/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 433, in api_list
+    return render_to_response('api_list.html', manage_info)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 703, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "D:/HttpRunnerManager\ApiManager\templatetags\custom_tags.py", line 27, in convert_eval
+    return update_include(eval(value))
+TypeError: eval() arg 1 must be a string, bytes or code object
+2020-01-20 16:31:05,900 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/api_list/1/ HTTP/1.1" 500 215401
+2020-01-20 16:31:08,260 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 16:31:15,842 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/api_list/1/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 433, in api_list
+    return render_to_response('api_list.html', manage_info)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 703, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "D:/HttpRunnerManager\ApiManager\templatetags\custom_tags.py", line 27, in convert_eval
+    return update_include(eval(value))
+TypeError: eval() arg 1 must be a string, bytes or code object
+2020-01-20 16:31:17,542 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/api_list/1/ HTTP/1.1" 500 215401
+2020-01-20 16:31:52,904 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 16:32:27,331 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/api_list/1/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 433, in api_list
+    return render_to_response('api_list.html', manage_info)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\shortcuts.py", line 27, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\template\base.py", line 703, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "D:/HttpRunnerManager\ApiManager\templatetags\custom_tags.py", line 27, in convert_eval
+    return update_include(eval(value))
+TypeError: eval() arg 1 must be a string, bytes or code object
+2020-01-20 16:32:29,091 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/api_list/1/ HTTP/1.1" 500 215401
+2020-01-20 16:47:13,120 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/api_list/1/ HTTP/1.1" 200 27303
+2020-01-20 16:47:14,896 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 16:47:15,001 [django.server:124] [basehttp:log_message] [INFO]- "GET /favicon.ico HTTP/1.1" 302 0
+2020-01-20 16:47:15,032 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/img/favicon.ico HTTP/1.1" 200 67646
+2020-01-20 16:47:27,579 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 24834
+2020-01-20 16:47:28,001 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 16:47:30,327 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34405
+2020-01-20 16:47:41,942 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 9
+2020-01-20 16:47:44,665 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/add_api/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 194, in add_api
+    msg = api_info_logic(**testcase_info)
+  File "D:/HttpRunnerManager\ApiManager\utils\common.py", line 408, in api_info_logic
+    return add_api_data(type, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\utils\operation.py", line 191, in add_api_data
+    if api_opt.get_api_name(name, module, project) < 1:
+  File "D:/HttpRunnerManager\ApiManager\managers.py", line 176, in get_api_name
+    return self.filter(belong_module__id=module_name).filter(Api_name__exact=name).filter(
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1153, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1015, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\query.py", line 1379, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'Api_name' into field. Choices are: author, belong_module, belong_module_id, belong_project, create_time, id, include, name, request, type, update_time
+2020-01-20 16:47:45,054 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/add_api/ HTTP/1.1" 500 24453
+2020-01-20 16:52:40,341 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_api/ HTTP/1.1" 200 16
+2020-01-20 16:52:40,513 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/api_list/1/ HTTP/1.1" 200 29785
+2020-01-20 16:52:40,770 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 16:52:49,137 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/edit_case/2/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 482, in edit_case
+    request = eval(test_info[0].request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 307, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+2020-01-20 16:52:49,672 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/edit_case/2/ HTTP/1.1" 500 90454
+2020-01-20 16:52:53,450 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 16:54:05,436 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/edit_case/3/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 482, in edit_case
+    request = eval(test_info[0].request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 307, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+2020-01-20 16:54:05,814 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/edit_case/3/ HTTP/1.1" 500 90161
+2020-01-20 16:55:42,861 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/test_list/1/
+Traceback (most recent call last):
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\huqiang\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:/HttpRunnerManager\HttpRunnerManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 39, in wrapper
+    return func(request, *args, **kwargs)
+  File "D:/HttpRunnerManager\ApiManager\views.py", line 384, in test_list
+    msg = copy_test_data(test_info.get('data').pop('index'), test_info.get('data').pop('name'))
+TypeError: copy_test_data() missing 1 required positional argument: 'tag'
+2020-01-20 16:55:43,147 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/test_list/1/ HTTP/1.1" 500 22460
+2020-01-20 16:56:49,768 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/config_list/1/ HTTP/1.1" 200 19498
+2020-01-20 16:56:50,068 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 16:56:53,049 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_config/ HTTP/1.1" 200 24781
+2020-01-20 16:57:09,881 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 24834
+2020-01-20 16:57:10,112 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 16:57:15,970 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/run_test/ HTTP/1.1" 200 29300
+2020-01-20 16:57:23,094 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 17:08:12,931 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/api_list/1/ HTTP/1.1" 200 29785
+2020-01-20 17:08:13,004 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/js/commons.js HTTP/1.1" 304 0
+2020-01-20 17:08:13,321 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 17:09:34,030 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/test_list/1/
+Traceback (most recent call last):
+TypeError: del_test_data() missing 1 required positional argument: 'tag'
+2020-01-20 17:09:34,138 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/test_list/1/ HTTP/1.1" 500 22436
+2020-01-20 17:19:20,079 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/test_list/1/
+Traceback (most recent call last):
+TypeError: del_test_data() missing 1 required positional argument: 'tag'
+2020-01-20 17:19:20,196 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/test_list/1/ HTTP/1.1" 500 22436
+2020-01-20 17:19:44,912 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/test_list/1/
+Traceback (most recent call last):
+TypeError: del_test_data() missing 1 required positional argument: 'tag'
+2020-01-20 17:19:45,029 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/test_list/1/ HTTP/1.1" 500 22436
+2020-01-20 17:22:08,090 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/test_list/1/ HTTP/1.1" 200 24834
+2020-01-20 17:22:08,545 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 17:22:26,970 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/api_list/1/ HTTP/1.1" 200 29784
+2020-01-20 17:22:27,524 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 17:23:24,158 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/api_list/1/ HTTP/1.1" 200 2
+2020-01-20 17:23:46,070 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/api_list/1/ HTTP/1.1" 200 27304
+2020-01-20 17:23:46,385 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 17:24:51,862 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/api_list/1/ HTTP/1.1" 200 27304
+2020-01-20 17:24:51,922 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/api_list/1/ HTTP/1.1" 200 27304
+2020-01-20 17:24:51,933 [django.server:124] [basehttp:log_message] [ERROR]- "GET /api/api_list/1/ HTTP/1.1" 500 59
+2020-01-20 17:24:52,221 [django.server:124] [basehttp:log_message] [INFO]- "GET /favicon.ico HTTP/1.1" 302 0
+2020-01-20 17:24:52,294 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 17:24:52,301 [django.server:124] [basehttp:log_message] [INFO]- "GET /static/assets/img/favicon.ico HTTP/1.1" 200 67646
+2020-01-20 17:25:16,477 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/api_list/1/ HTTP/1.1" 200 2
+2020-01-20 17:25:17,366 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/api_list/1/ HTTP/1.1" 200 24822
+2020-01-20 17:25:17,678 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 17:25:48,611 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34405
+2020-01-20 17:25:59,467 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 9
+2020-01-20 17:26:01,007 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_api/ HTTP/1.1" 200 16
+2020-01-20 17:26:03,144 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/api_list/1/ HTTP/1.1" 200 27306
+2020-01-20 17:26:03,467 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 17:29:15,042 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/test_list/1/
+Traceback (most recent call last):
+TypeError: copy_test_data() missing 1 required positional argument: 'tag'
+2020-01-20 17:29:15,344 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/test_list/1/ HTTP/1.1" 500 22489
+2020-01-20 17:29:53,246 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/test_list/1/
+Traceback (most recent call last):
+TypeError: copy_test_data() missing 1 required positional argument: 'tag'
+2020-01-20 17:29:53,563 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/test_list/1/ HTTP/1.1" 500 22489
+2020-01-20 17:30:10,212 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/api_list/1/ HTTP/1.1" 200 2
+2020-01-20 17:30:13,161 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/api_list/1/ HTTP/1.1" 200 24830
+2020-01-20 17:30:13,556 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 17:30:17,969 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/test_list/1/
+Traceback (most recent call last):
+TypeError: copy_test_data() missing 1 required positional argument: 'tag'
+2020-01-20 17:30:18,288 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/test_list/1/ HTTP/1.1" 500 22489
+2020-01-20 17:30:45,613 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/test_list/1/
+Traceback (most recent call last):
+TypeError: copy_test_data() missing 1 required positional argument: 'tag'
+2020-01-20 17:30:45,956 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/test_list/1/ HTTP/1.1" 500 22489
+2020-01-20 17:31:55,164 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/test_list/1/
+Traceback (most recent call last):
+TypeError: copy_test_data() missing 1 required positional argument: 'tag'
+2020-01-20 17:31:55,484 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/test_list/1/ HTTP/1.1" 500 22489
+2020-01-20 17:32:21,633 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/api_list/1/ HTTP/1.1" 200 24829
+2020-01-20 17:32:22,015 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 17:32:32,031 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/api_list/1/ HTTP/1.1" 200 2
+2020-01-20 17:32:33,544 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/api_list/1/ HTTP/1.1" 200 27303
+2020-01-20 17:32:33,912 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 17:32:51,412 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/api_list/1/ HTTP/1.1" 200 2
+2020-01-20 17:32:52,521 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/api_list/1/ HTTP/1.1" 200 29785
+2020-01-20 17:32:52,890 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 17:33:19,743 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_case/ HTTP/1.1" 200 34405
+2020-01-20 17:33:26,953 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/add_api/ HTTP/1.1" 200 34405
+2020-01-20 17:33:32,773 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/api_list/1/ HTTP/1.1" 200 29785
+2020-01-20 17:33:33,091 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 17:35:53,870 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/api_list/1/ HTTP/1.1" 200 29784
+2020-01-20 17:35:54,271 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/add_case/ HTTP/1.1" 200 0
+2020-01-20 17:38:18,737 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/module_list/1/ HTTP/1.1" 200 28354
+2020-01-20 17:38:22,046 [django.server:124] [basehttp:log_message] [INFO]- "GET /api/project_list/1/ HTTP/1.1" 200 29560
+2020-01-20 17:39:29,200 [django.server:124] [basehttp:log_message] [INFO]- "POST /api/get_project_info/ HTTP/1.1" 200 9
+2020-01-20 17:44:23,799 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/upload_file/
+Traceback (most recent call last):
+AttributeError: 'str' object has no attribute 'keys'
+2020-01-20 17:44:24,186 [django.server:124] [basehttp:log_message] [ERROR]- "POST /api/upload_file/ HTTP/1.1" 500 22723

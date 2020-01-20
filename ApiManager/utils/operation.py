@@ -7,7 +7,7 @@ from django.db import DataError
 
 from ApiManager import separator
 from ApiManager.models import ProjectInfo, ModuleInfo, TestCaseInfo, UserInfo, EnvInfo, TestReports, DebugTalk, \
-    TestSuite
+    TestSuite,ApiInfo
 
 
 logger = logging.getLogger('HttpRunnerManager')
@@ -167,6 +167,44 @@ def add_case_data(type, **kwargs):
         return '字段长度超长，请重新编辑'
     return 'ok'
 
+
+def add_api_data(type, **kwargs):
+    """
+    接口信息落地
+    :param type: boolean: true: 添加新用例， false: 更新接口
+    :param kwargs: di
+    :return: ok or tips
+    """
+    api_info = kwargs.get('test').get('case_info')
+    api_opt = ApiInfo.objects
+    name = kwargs.get('test').get('name')
+    module = api_info.get('module')
+    project = api_info.get('project')
+    belong_module = ModuleInfo.objects.get_module_name(module, type=False)
+    config = api_info.get('config', '')
+    if config != '':
+        api_info.get('include')[0] = eval(config)
+
+    try:
+        if type:
+
+            if api_opt.get_api_name(name, module, project) < 1:
+                api_opt.insert_api(belong_module, **kwargs)
+                logger.info('{name}接口添加成功: {kwargs}'.format(name=name, kwargs=kwargs))
+            else:
+                return '接口或配置已存在，请重新编辑'
+        else:
+            index = api_info.get('test_index')
+            if name != api_opt.get_api_by_id(index, type=False) \
+                    and api_opt.get_api_name(name, module, project) > 0:
+                return '用接口或配置已在该模块中存在，请重新命名'
+            api_opt.update_api(belong_module, **kwargs)
+            logger.info('{name}接口更新成功: {kwargs}'.format(name=name, kwargs=kwargs))
+
+    except DataError:
+        logger.error('接口信息：{kwargs}过长！！'.format(kwargs=kwargs))
+        return '字段长度超长，请重新编辑'
+    return 'ok'
 
 '''配置数据落地'''
 
@@ -339,14 +377,17 @@ def del_project_data(id):
     return 'ok'
 
 
-def del_test_data(id):
+def del_test_data(id,tag):
     """
     根据用例或配置索引删除数据
     :param id: str or int: test or config index
     :return: ok or tips
     """
     try:
-        TestCaseInfo.objects.get(id=id).delete()
+        if tag == 'api':
+            ApiInfo.objects.get(id=id).delete()
+        else:
+            TestCaseInfo.objects.get(id=id).delete()
     except ObjectDoesNotExist:
         return '删除异常，请重试'
     logging.info('用例/配置已删除')
@@ -380,7 +421,7 @@ def del_report_data(id):
     return 'ok'
 
 
-def copy_test_data(id, name):
+def copy_test_data(id, name,tag):
     """
     复制用例信息，默认插入到当前项目、莫夸
     :param id: str or int: 复制源
@@ -388,12 +429,18 @@ def copy_test_data(id, name):
     :return: ok or tips
     """
     try:
-        test = TestCaseInfo.objects.get(id=id)
-        belong_module = test.belong_module
+        if tag =='api':
+            test = ApiInfo.objects.get(id=id)
+            belong_module = test.belong_module
+        else:
+            test = TestCaseInfo.objects.get(id=id)
+            belong_module = test.belong_module
     except ObjectDoesNotExist:
         return '复制异常，请重试'
     if TestCaseInfo.objects.filter(name=name, belong_module=belong_module).count() > 0:
         return '用例/配置名称重复了哦'
+    if tag =='api' and ApiInfo.objects.filter(name=name, belong_module=belong_module).count() > 0:
+        return '接口/配置名称重复了哦'
     test.id = None
     test.name = name
     request = eval(test.request)

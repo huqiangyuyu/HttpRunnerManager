@@ -1,7 +1,7 @@
 from django.db import models
 
 from ApiManager.managers import UserTypeManager, UserInfoManager, ProjectInfoManager, ModuleInfoManager, \
-    TestCaseInfoManager, EnvInfoManager
+    TestCaseInfoManager, EnvInfoManager,ApiInfoManager
 
 
 # Create your models here.
@@ -88,15 +88,15 @@ class ApiInfo(BaseTable):
         verbose_name = '接口信息'
         db_table = 'ApiInfo'
 
-    Api_type = models.IntegerField('test/config', default=1)
-    Api_name = models.CharField('接口/配置名称', max_length=50, null=False)
+    type = models.IntegerField('test/config', default=1)
+    name = models.CharField('接口/配置名称', max_length=50, null=False)
     belong_project = models.CharField('所属项目', max_length=50, null=False)
     belong_module = models.ForeignKey(ModuleInfo, on_delete=models.CASCADE)
-    Api_include = models.CharField('前置config/test', max_length=1024, null=True)
-    Api_author = models.CharField('接口编写人员', max_length=20, null=False)
-    Api_request = models.TextField('接口信息', null=False)
+    include = models.CharField('前置config/test', max_length=1024, null=True)
+    author = models.CharField('接口编写人员', max_length=20, null=False)
+    request = models.TextField('接口信息', null=False)
 
-    objects = TestCaseInfoManager()
+    objects = ApiInfoManager()
 
 
 class TestReports(BaseTable):

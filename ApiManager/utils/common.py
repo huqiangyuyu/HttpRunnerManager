@@ -13,7 +13,7 @@ from djcelery.models import PeriodicTask
 
 from ApiManager.models import ModuleInfo, TestCaseInfo, TestReports, TestSuite
 from ApiManager.utils.operation import add_project_data, add_module_data, add_case_data, add_config_data, \
-    add_register_data
+    add_register_data,add_api_data
 from ApiManager.utils.task_opt import create_task
 
 
@@ -313,6 +313,99 @@ def case_info_logic(type=True, **kwargs):
         kwargs.setdefault('test', test)
         return add_case_data(type, **kwargs)
 
+def api_info_logic(type=True, **kwargs):
+    """
+    接口信息逻辑处理以数据处理
+    :param type: boolean: True 默认新增接口信息， False: 更新接口
+    :param kwargs: dict: 接口信息
+    :return: str: ok or tips
+    """
+    test = kwargs.pop('test')
+    '''
+        动态展示模块
+    '''
+    if 'request' not in test.keys():
+        type = test.pop('type')
+        if type == 'module':
+            return load_modules(**test)
+        elif type == 'case':
+            return load_cases(**test)
+        else:
+            return load_cases(type=2, **test)
+
+    else:
+        logging.info('接口原始信息: {kwargs}'.format(kwargs=kwargs))
+        if test.get('name').get('case_name') is '':
+            return '接口名称不可为空'
+        if test.get('name').get('module') == '请选择':
+            return '请选择或者添加模块'
+        if test.get('name').get('project') == '请选择':
+            return '请选择项目'
+        if test.get('name').get('project') == '':
+            return '请先添加项目'
+        if test.get('name').get('module') == '':
+            return '请添加模块'
+
+        name = test.pop('name')
+        test.setdefault('name', name.pop('case_name'))
+
+        test.setdefault('case_info', name)
+
+        validate = test.pop('validate')
+        if validate:
+            validate_list = key_value_list('validate', **validate)
+            if not isinstance(validate_list, list):
+                return validate_list
+            test.setdefault('validate', validate_list)
+
+        extract = test.pop('extract')
+        if extract:
+            test.setdefault('extract', key_value_list('extract', **extract))
+
+        request_data = test.get('request').pop('request_data')
+        data_type = test.get('request').pop('type')
+        if request_data and data_type:
+            if data_type == 'json':
+                test.get('request').setdefault(data_type, request_data)
+            else:
+                data_dict = key_value_dict('data', **request_data)
+                if not isinstance(data_dict, dict):
+                    return data_dict
+                test.get('request').setdefault(data_type, data_dict)
+
+        headers = test.get('request').pop('headers')
+        if headers:
+            test.get('request').setdefault('headers', key_value_dict('headers', **headers))
+
+        variables = test.pop('variables')
+        if variables:
+            variables_list = key_value_list('variables', **variables)
+            if not isinstance(variables_list, list):
+                return variables_list
+            test.setdefault('variables', variables_list)
+
+        parameters = test.pop('parameters')
+        if parameters:
+            params_list = key_value_list('parameters', **parameters)
+            if not isinstance(params_list, list):
+                return params_list
+            test.setdefault('parameters', params_list)
+
+        hooks = test.pop('hooks')
+        if hooks:
+
+            setup_hooks_list = key_value_list('setup_hooks', **hooks)
+            if not isinstance(setup_hooks_list, list):
+                return setup_hooks_list
+            test.setdefault('setup_hooks', setup_hooks_list)
+
+            teardown_hooks_list = key_value_list('teardown_hooks', **hooks)
+            if not isinstance(teardown_hooks_list, list):
+                return teardown_hooks_list
+            test.setdefault('teardown_hooks', teardown_hooks_list)
+
+        kwargs.setdefault('test', test)
+        return add_api_data(type, **kwargs)
 
 def config_info_logic(type=True, **kwargs):
     """

@@ -20,10 +20,10 @@
 
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="name"
-                               style="font-weight: inherit; font-size: small ">用例名称:</label>
+                               style="font-weight: inherit; font-size: small ">接口名称:</label>
                         <div class="col-sm-9">
                             <input name="name" type="text" class="form-control" id="name"
-                                   placeholder="给用例起个名吧" value="">
+                                   placeholder="给接口起个名吧" value="">
                         </div>
                     </div>
 
@@ -39,7 +39,7 @@
         <div class="am-modal-dialog">
             <div class="am-modal-hd">HttpRunnerManager</div>
             <div class="am-modal-bd">
-                亲，请确认该用例是否被其他用例依赖后再谨慎删除哦
+                亲，请确认该接口是否被其他接口依赖后再谨慎删除哦
             </div>
             <div class="am-modal-footer">
                 <span class="am-modal-btn" data-am-modal-cancel>取消</span>
@@ -76,11 +76,11 @@
 
     <div class="admin-biaogelist">
         <div class="listbiaoti am-cf">
-            <ul class="am-icon-flag on"> 用例列表</ul>
-            <dl class="am-icon-home" style="float: right;"> 当前位置： 用例管理 > <a href="#">用例展示</a></dl>
+            <ul class="am-icon-flag on"> 接口列表</ul>
+            <dl class="am-icon-home" style="float: right;"> 当前位置： 接口管理 > <a href="#">接口展示</a></dl>
             <dl>
                 <button type="button" class="am-btn am-btn-primary am-round am-btn-xs am-icon-plus"
-                        onclick="location='/api/add_case/'">新增用例
+                        onclick="location='/api/add_api/'">新增接口
                 </button>
                 <button type="button" class="am-btn am-btn-warning am-round am-btn-xs am-icon-plus"
                         onclick="location='/api/add_config/'">新增配置
@@ -118,7 +118,7 @@
 
                     <li style="padding-top: 5px"><input value="{{ info.name }}" type="text" name="name"
                                                         class=" am-input-zm am-input-xm"
-                                                        placeholder="用例名称"/></li>
+                                                        placeholder="接口名称"/></li>
                     <li>
                     <li style="padding-top: 5px"><input value="{{ info.user }}" type="text" name="user"
                                                         class="am-input-sm am-input-xm"
@@ -235,7 +235,7 @@
 
             <div class="am-btn-group am-btn-group-xs">
                 <button type="button" class="am-btn am-btn-default" onclick="location='/api/add_case/'"><span
-                        class="am-icon-plus"></span> 新增用例
+                        class="am-icon-plus"></span> 新增接口
                 </button>
                 <button type="button" class="am-btn am-btn-default" onclick="location='/api/add_config/'"><span
                         class="am-icon-plus"></span> 新增配置
@@ -267,7 +267,7 @@
 
         function my_submit() {
             if ($("input:checked").size() == 0) {
-                myAlert("请至少选择一条用例运行！");
+                myAlert("请至少选择一条接口运行！");
             } else {
                 $('#select_env').modal({
                         relatedTarget: this,
@@ -289,7 +289,7 @@
             $('#my-invalid').modal({
                 relatedTarget: this,
                 onConfirm: function () {
-                    del_data_ajax(name, '/api/test_list/1/')
+                    del_data_ajax(name, '/api/api_list/1/')
                 },
                 onCancel: function () {
                 }
@@ -301,7 +301,7 @@
             $('#my-copy').modal({
                 relatedTarget: this,
                 onConfirm: function () {
-                    copy_data_ajax(id, '/api/test_list/1/')
+                    copy_data_ajax(id, '/api/api_list/1/')
                 },
                 onCancel: function () {
                 }

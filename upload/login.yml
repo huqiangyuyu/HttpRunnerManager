@@ -1,0 +1,27 @@
+base_url: http://172.32.12.243:20520
+name: login
+request:
+    flag: login
+    headers:
+        appversion: 3.0.0.1
+        content-type: application/json
+        imei: '865166021027217'
+        system: '2'
+        systemversion: vivo y31a_android_5.1.1
+    json:
+        aes: false
+        code: 35293U7p67t2
+        deviceId: aee4718444034abfcc32d162ba901ce3
+        deviceid: myphone&iccid=&imsi=&imei=865166021027217
+        deviceinfo:
+            appversion: 2.0.9.7
+            deviceIp: 172.16.2.56
+            mac: 00:81:47:87:e0:35
+            net: Wi-Fi
+            only_post_once_transcation_cache_id: 0.23066174081248625_rrr
+            systemversion: vivo y31a_android_5.1.1
+        tokenId: A0000071EEA694_B5FEE053-D30F-42D0-B855-43FD8E13F253_9999999999
+        userAccount: '16101540014'
+        userPassword: g9WDbaysPYhQR5+tg3vUtaeheP3mZhJ+snw7eSeCtowZ7Io3TUHdruN4IHTlMUVD/FPlJMJQtQvKQTTnWHcFfHGZRZHGVqQ9YlgVEj5w1UFyReUNJ3BrIdzKhSX2S0sTNV2LNQRFOsYjvAfeYN9FIA==|MTIzNDU2Nzg5MDk4NzY1NA==|yBpUzhxuYm9dLo34j8furA==
+    method: POST
+    url: http://172.32.5.94:20183/mobilebank/ws/v2/loginNewFacade/login
