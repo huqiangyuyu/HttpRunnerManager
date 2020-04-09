@@ -1745,3 +1745,11 @@ TypeError: copy_test_data() missing 1 required positional argument: 'tag'
 2020-01-20 17:44:23,799 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/upload_file/
 Traceback (most recent call last):
 AttributeError: 'str' object has no attribute 'keys'
+2020-02-10 16:57:50,316 [HttpRunnerManager:60] [views:login] [INFO]- huqiang 登录失败, 请检查用户名或者密码
+2020-02-10 16:57:59,332 [HttpRunnerManager:60] [views:login] [INFO]- huqiang 登录失败, 请检查用户名或者密码
+2020-02-10 16:58:03,934 [HttpRunnerManager:60] [views:login] [INFO]- huqiang 登录失败, 请检查用户名或者密码
+2020-02-10 16:58:07,510 [HttpRunnerManager:60] [views:login] [INFO]- huqiang 登录失败, 请检查用户名或者密码
+2020-02-10 16:58:15,496 [HttpRunnerManager:55] [views:login] [INFO]- huqiang 登录成功
+2020-02-10 17:00:33,886 [HttpRunnerManager:110] [operation:add_module_data] [INFO]- 模块添加成功：{'module_name': '23123123', 'test_user': '12312312312', 'simple_desc': '123123', 'other_desc': '', 'belong_project': <ProjectInfo: ProjectInfo object (1)>}
+2020-04-09 16:10:49,092 [django.request:93] [base:get_response] [WARNING]- Not Found: /
+2020-04-09 16:11:44,954 [HttpRunnerManager:55] [views:login] [INFO]- huqiang 登录成功
