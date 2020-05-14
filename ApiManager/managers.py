@@ -128,7 +128,8 @@ class TestCaseInfoManager(models.Manager):
     def get_case_name(self, name, module_name, belong_project):
         return self.filter(belong_module__id=module_name).filter(name__exact=name).filter(
             belong_project__exact=belong_project).count()
-
+    def get_case_id(self, name):
+        return self.get(name=name).id
     def get_case_by_id(self, index, type=True):
         if type:
             return self.filter(id=index).all()
@@ -140,19 +141,31 @@ class TestCaseInfoManager(models.Manager):
 
 class ApiInfoManager(models.Manager):
     def insert_api(self, belong_module, **kwargs):
-        api_info = kwargs.get('test').pop('case_info')
-        self.create(name=kwargs.get('test').get('name'), belong_project=api_info.pop('project'),
+        api_info = kwargs.get('teststeps').pop('api_info')
+        self.create(name=kwargs.get('teststeps').get('name'), belong_project=api_info.pop('project'),
                     belong_module=belong_module,
                     author=api_info.pop('author'), include=api_info.pop('include'), request=kwargs)
 
     def update_api(self, belong_module, **kwargs):
-        api_info = kwargs.get('test').pop('case_info')
+        api_info = kwargs.get('teststeps').pop('api_info')
         obj = self.get(id=api_info.pop('test_index'))
         obj.belong_project = api_info.pop('project')
         obj.belong_module = belong_module
-        obj.name = kwargs.get('test').get('name')
+        obj.name = kwargs.get('teststeps').get('name')
         obj.author = api_info.pop('author')
         obj.include = api_info.pop('include')
+        obj.request = kwargs
+        obj.save()
+
+    def api_update(self, id, **kwargs):
+        # api_info = kwargs.get('teststeps').pop('api_info')
+        obj = self.get(id=id)
+        # obj.belong_project = api_info.pop('project')
+        # obj.belong_module = belong_module
+        # obj.name = kwargs.get('teststeps').get('name')
+        # obj.author = api_info.pop('author')
+        # obj.include = api_info.pop('include')
+
         obj.request = kwargs
         obj.save()
 
@@ -176,6 +189,12 @@ class ApiInfoManager(models.Manager):
         return self.filter(belong_module__id=module_name).filter(name__exact=name).filter(
             belong_project__exact=belong_project).count()
 
+    def get_api_id(self, name,module):
+        # return self.get(name=name).filter(belong_module=module).id
+        return self.get(name=name,belong_module=module).id
+    def get_api_request(self, id):
+        # return self.get(name=name).filter(belong_module=module).id
+        return self.get(id=id).request
     def get_api_by_id(self, index, type=True):
         if type:
             return self.filter(id=index).all()

@@ -1,6 +1,6 @@
 import datetime
 import logging
-import os
+import os,json
 
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import DataError
@@ -167,6 +167,46 @@ def add_case_data(type, **kwargs):
         return '字段长度超长，请重新编辑'
     return 'ok'
 
+def update_api_data(id,validate_dict, extract_dict):
+    """
+    用例信息落地
+    :param type: boolean: true: 添加新用例， false: 更新用例
+    :param kwargs: dict
+    :return: ok or tips
+    """
+    # api_dict ={}
+    # api_dict['validate']=validate_dict
+    # api_dict['extract'] = extract_dict
+    api_opt = ApiInfo.objects
+    data= api_opt.get_api_request(id)
+    request = eval(data)
+    request['teststeps']['validate']=validate_dict
+    if extract_dict != '不存在extract':
+        request['teststeps']['extract']=extract_dict
+    # belong_module = ModuleInfo.objects.get_module_name(module, type=False)
+
+    api_opt.api_update(id, **request)
+
+    # try:
+    #     if type:
+	#
+    #         if case_opt.get_case_name(name, module, project) < 1:
+    #             case_opt.insert_case(belong_module, **kwargs)
+    #             logger.info('{name}用例添加成功: {kwargs}'.format(name=name, kwargs=kwargs))
+    #         else:
+    #             return '用例或配置已存在，请重新编辑'
+    #     else:
+    #         index = case_info.get('test_index')
+    #         if name != case_opt.get_case_by_id(index, type=False) \
+    #                 and case_opt.get_case_name(name, module, project) > 0:
+    #             return '用例或配置已在该模块中存在，请重新命名'
+    #         case_opt.update_case(belong_module, **kwargs)
+    #         logger.info('{name}用例更新成功: {kwargs}'.format(name=name, kwargs=kwargs))
+	#
+    # except DataError:
+    #     logger.error('用例信息：{kwargs}过长！！'.format(kwargs=kwargs))
+    #     return '字段长度超长，请重新编辑'
+    return 'ok'
 
 def add_api_data(type, **kwargs):
     """
@@ -175,9 +215,9 @@ def add_api_data(type, **kwargs):
     :param kwargs: di
     :return: ok or tips
     """
-    api_info = kwargs.get('test').get('case_info')
+    api_info = kwargs.get('teststeps').get('api_info')
     api_opt = ApiInfo.objects
-    name = kwargs.get('test').get('name')
+    name = kwargs.get('teststeps').get('name')
     module = api_info.get('module')
     project = api_info.get('project')
     belong_module = ModuleInfo.objects.get_module_name(module, type=False)
@@ -208,6 +248,38 @@ def add_api_data(type, **kwargs):
 
 '''配置数据落地'''
 
+def query_config_id(name):
+    """
+    配置信息落地
+    :param type: boolean: true: 添加新配置， fasle: 更新配置
+    :param kwargs: dict
+    :return: ok or tips
+    """
+    case_opt = TestCaseInfo.objects
+    case_id = case_opt.get_case_id(name)
+    return case_id
+
+def query_module_name(id):
+    """
+    配置信息落地
+    :param type: boolean: true: 添加新配置， fasle: 更新配置
+    :param kwargs: dict
+    :return: ok or tips
+    """
+    module_opt = ModuleInfo.objects
+    module_name = module_opt.get_module_name(type=False, id=id)
+    return module_name
+
+def query_api_id(name,module):
+    """
+    配置信息落地
+    :param type: boolean: true: 添加新配置， fasle: 更新配置
+    :param kwargs: dict
+    :return: ok or tips
+    """
+    api_opt = ApiInfo.objects
+    api_id = api_opt.get_api_id(name,module)
+    return api_id
 
 def add_config_data(type, **kwargs):
     """

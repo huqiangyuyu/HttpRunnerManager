@@ -21,7 +21,7 @@ from ApiManager.utils.common import module_info_logic, project_info_logic, case_
 from ApiManager.utils.operation import env_data_logic, del_module_data, del_project_data, del_test_data, copy_test_data, \
     del_report_data, add_suite_data, copy_suite_data, del_suite_data, edit_suite_data, add_test_reports
 from ApiManager.utils.pagination import get_pager_info
-from ApiManager.utils.runner import run_by_batch, run_test_by_type
+from ApiManager.utils.runner import run_by_batch, run_test_by_type,run_test_by_env,query_module
 from ApiManager.utils.task_opt import delete_task, change_task_status
 from ApiManager.utils.testcase import get_time_stamp
 from httprunner.api import HttpRunner
@@ -235,7 +235,7 @@ def run_test(request):
 
     testcase_dir_path = os.path.join(os.getcwd(), "suite")
     testcase_dir_path = os.path.join(testcase_dir_path, get_time_stamp())
-
+    test_path = testcase_dir_path + '/手机银行'
     if request.is_ajax():
         kwargs = json.loads(request.body.decode('utf-8'))
         id = kwargs.pop('id')
@@ -251,7 +251,11 @@ def run_test(request):
         type = request.POST.get('type', 'test')
 
         run_test_by_type(id, base_url, testcase_dir_path, type)
-        summary = runner.run(testcase_dir_path)
+        run_test_by_env(test_path)
+        #获取套件名称
+        module = query_module(id)
+        suite_path = test_path + '/testsuites/'+ module+'_testsuite.yml'
+        summary = runner.run(suite_path)
         shutil.rmtree(testcase_dir_path)
         runner.summary = timestamp_to_datetime(summary, type=False)
 
@@ -375,11 +379,12 @@ def test_list(request, id):
     """
 
     account = request.session["now_account"]
+    tag = 'testcase'
     if request.is_ajax():
         test_info = json.loads(request.body.decode('utf-8'))
 
         if test_info.get('mode') == 'del':
-            msg = del_test_data(test_info.pop('id'))
+            msg = del_test_data(test_info.pop('id'),tag)
         elif test_info.get('mode') == 'copy':
             msg = copy_test_data(test_info.get('data').pop('index'), test_info.get('data').pop('name'))
         return HttpResponse(get_ajax_msg(msg, 'ok'))
@@ -445,7 +450,7 @@ def config_list(request, id):
         test_info = json.loads(request.body.decode('utf-8'))
 
         if test_info.get('mode') == 'del':
-            msg = del_test_data(test_info.pop('id'))
+            msg = del_test_data(test_info.pop('id'),'case')
         elif test_info.get('mode') == 'copy':
             msg = copy_test_data(test_info.get('data').pop('index'), test_info.get('data').pop('name'))
         return HttpResponse(get_ajax_msg(msg, 'ok'))
@@ -477,7 +482,7 @@ def edit_case(request, id=None):
         testcase_lists = json.loads(request.body.decode('utf-8'))
         msg = case_info_logic(type=False, **testcase_lists)
         return HttpResponse(get_ajax_msg(msg, '/api/test_list/1/'))
-
+#case和api如何共存
     test_info = TestCaseInfo.objects.get_case_by_id(id)
     request = eval(test_info[0].request)
     include = eval(test_info[0].include)
@@ -494,7 +499,7 @@ def edit_case(request, id=None):
 @login_check
 def edit_api(request, id=None):
     """
-    编辑用例
+    编辑接口
     :param request:
     :param id:
     :return:
@@ -503,20 +508,20 @@ def edit_api(request, id=None):
     account = request.session["now_account"]
     if request.is_ajax():
         testcase_lists = json.loads(request.body.decode('utf-8'))
-        msg = case_info_logic(type=False, **testcase_lists)
-        return HttpResponse(get_ajax_msg(msg, '/api/test_list/1/'))
+        msg = api_info_logic(type=False, **testcase_lists)
+        return HttpResponse(get_ajax_msg(msg, '/api/api_list/1/'))
 
-    test_info = TestCaseInfo.objects.get_case_by_id(id)
+    test_info = ApiInfo.objects.get_api_by_id(id)
     request = eval(test_info[0].request)
     include = eval(test_info[0].include)
     manage_info = {
         'account': account,
         'info': test_info[0],
-        'request': request['test'],
+        'request': request['teststeps'],
         'include': include,
         'project': ProjectInfo.objects.all().values('project_name').order_by('-create_time')
     }
-    return render_to_response('edit_case.html', manage_info)
+    return render_to_response('edit_api.html', manage_info)
 
 @login_check
 def edit_config(request, id=None):
@@ -822,6 +827,7 @@ def suite_list(request, id):
 
 @login_check
 def add_suite(request):
+    #添加套件
     account = request.session["now_account"]
     if request.is_ajax():
         kwargs = json.loads(request.body.decode('utf-8'))
