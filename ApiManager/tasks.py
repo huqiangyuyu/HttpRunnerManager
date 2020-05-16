@@ -17,7 +17,7 @@ from httprunner.api import HttpRunner, logger
 
 
 @shared_task
-def main_hrun(testset_path, report_name):
+def main_hrun(testset_path, testcase_dir_path, report_name):
     """
     用例运行
     :param testset_path: dict or list
@@ -29,10 +29,10 @@ def main_hrun(testset_path, report_name):
         "failfast": False,
     }
     runner = HttpRunner(**kwargs)
-    runner.run(testset_path)
-    shutil.rmtree(testset_path)
+    summary = runner.run(testset_path)
+    shutil.rmtree(testcase_dir_path)
 
-    runner.summary = timestamp_to_datetime(runner.summary)
+    runner.summary = timestamp_to_datetime(summary)
     report_path = add_test_reports(runner, report_name=report_name)
     os.remove(report_path)
 

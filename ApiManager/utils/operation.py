@@ -559,21 +559,18 @@ def add_test_reports(runner, report_name=None):
     runner.summary['time']['start_datetime'] = datetime.datetime.fromtimestamp(time_stamp).strftime('%Y-%m-%d %H:%M:%S')
     report_name = report_name if report_name else runner.summary['time']['start_datetime']
     runner.summary['html_report_name'] = report_name
-
     report_path = os.path.join(os.getcwd(), "reports{}{}.html".format(separator, int(runner.summary['time']['start_at'])))
-    runner.gen_html_report(html_report_template=os.path.join(os.getcwd(), "templates{}extent_report_template.html".format(separator)))
-
+    runner.gen_html_report(runner.summary,report_template=os.path.join(os.getcwd(), "templates{}extent_report_template.html".format(separator)))
     with open(report_path, encoding='utf-8') as stream:
         reports = stream.read()
-
+    print(ll)
     test_reports = {
         'report_name': report_name,
         'status': runner.summary.get('success'),
-        'successes': runner.summary.get('stat').get('successes'),
-        'testsRun': runner.summary.get('stat').get('testsRun'),
+        'successes': runner.summary.get('stat').get('testcases').get('success'),
+        'testsRun': runner.summary.get('stat').get('testcases').get('total'),
         'start_at': runner.summary['time']['start_datetime'],
         'reports': reports
     }
-
     TestReports.objects.create(**test_reports)
     return report_path

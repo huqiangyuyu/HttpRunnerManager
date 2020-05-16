@@ -27,10 +27,10 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label col-sm-3" for="case_name"
+                    <label class="control-label col-sm-3" for="api_name"
                            style="font-weight: inherit; font-size: small ">接口名称:</label>
                     <div class="col-sm-8">
-                        <input name="case_name" type="text" class="form-control" id="case_name"
+                        <input name="api_name" type="text" class="form-control" id="api_name"
                                placeholder="给接口起个名吧" value="">
                     </div>
                 </div>
@@ -324,7 +324,7 @@
                 <button id="save" type="button" class="am-btn am-btn-success am-radius">点 击 提 交
                 </button>&nbsp;
                 &raquo; &nbsp;
-                <a type="submit" href="/api/add_config/" class="am-btn am-btn-secondary am-radius">新 增 配 置</a>
+{#                <a type="submit" href="/api/add_config/" class="am-btn am-btn-secondary am-radius">新 增 配 置</a>#}
 
             </div>
         </div>
@@ -390,12 +390,12 @@
         $('#config').on('change', function () {
             if ($('#config').val() !== '请选择') {
                 var case_id = $('#config').val();
-                var case_name = $('#config option:selected').text();
-                var href = "<li disbaled id=" + case_id + " name='pre_config'><a style='color: cadetblue' href='/api/edit_config/" + case_id + "/' id = " + case_id + ">" + case_name + "" +
+                var api_name = $('#config option:selected').text();
+                var href = "<li disbaled id=" + case_id + " name='pre_config'><a style='color: cadetblue' href='/api/edit_config/" + case_id + "/' id = " + case_id + ">" + api_name + "" +
                     "</a><i class=\"js-remove\" onclick=remove_self('#" + case_id + "')>✖</i></li>";
                 $("li[name='pre_config']").remove();
                 $("#pre_case").prepend(href);
-                $('#config_pre').val("{'config': ['" + case_id + "', '" + case_name + "']}");
+                $('#config_pre').val("{'config': ['" + case_id + "', '" + api_name + "']}");
             }
         });
 
@@ -406,8 +406,8 @@
         $('#belong_case_id').on('change', function () {
             if ($('#belong_case_id').val() !== '请选择') {
                 var case_id = $('#belong_case_id').val();
-                var case_name = $('#belong_case_id option:selected').text();
-                var href = "<li id=" + case_id + "><a href='/api/edit_case/" + case_id + "/' id = " + case_id + ">" + case_name + "" +
+                var api_name = $('#belong_case_id option:selected').text();
+                var href = "<li id=" + case_id + "><a href='/api/edit_case/" + case_id + "/' id = " + case_id + ">" + api_name + "" +
                     "</a><i class=\"js-remove\" onclick=remove_self('#" + case_id + "')>✖</i></li>";
                 $("#pre_case").append(href);
             }
@@ -424,7 +424,7 @@
             $('#save_test').modal({
                 relatedTarget: this,
                 onConfirm: function () {
-                    case_ajax('api', editor)
+                    api_ajax('api', editor)
                 },
                 onCancel: function () {
                 }

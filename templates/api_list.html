@@ -166,7 +166,7 @@
                             {% endif %}
 
                             <div style="float: left">
-                                <a href="/api/edit_case/{{ foo.id }}/"
+                                <a href="/api/edit_api/{{ foo.id }}/"
                                    data-am-collapse="{target: '#pre_case{{ foo.id }}'}">{{ foo.name }}</a>
                                 <nav>
                                     <ul id="pre_case{{ foo.id }}" class="am-nav am-collapse">
@@ -191,7 +191,7 @@
                                                     </li>
                                                 {% else %}
                                                     <li id="{{ path.0 }}">
-                                                        <a href="/api/edit_case/{{ path.0 }}/" id="{{ path.0 }}"
+                                                        <a href="/api/edit_api/{{ path.0 }}/" id="{{ path.0 }}"
                                                            style="color:rosybrown">{{ path.1 }}</a>
                                                     </li>
 

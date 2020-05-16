@@ -232,7 +232,6 @@ def run_test(request):
         "failfast": False,
     }
     runner = HttpRunner(**kwargs)
-
     testcase_dir_path = os.path.join(os.getcwd(), "suite")
     testcase_dir_path = os.path.join(testcase_dir_path, get_time_stamp())
     test_path = testcase_dir_path + '/手机银行'
@@ -242,8 +241,13 @@ def run_test(request):
         base_url = kwargs.pop('env_name')
         type = kwargs.pop('type')
         run_test_by_type(id, base_url, testcase_dir_path, type)
+        #新增
+        run_test_by_env(test_path)
+        # 获取套件名称
+        module = query_module(id)
+        suite_path = test_path + '/testsuites/' + module + '_testsuite.yml'
         report_name = kwargs.get('report_name', None)
-        main_hrun.delay(testcase_dir_path, report_name)
+        main_hrun.delay(suite_path, testcase_dir_path,report_name)
         return HttpResponse('用例执行中，请稍后查看报告即可,默认时间戳命名报告')
     else:
         id = request.POST.get('id')
@@ -277,7 +281,7 @@ def run_batch_test(request):
 
     testcase_dir_path = os.path.join(os.getcwd(), "suite")
     testcase_dir_path = os.path.join(testcase_dir_path, get_time_stamp())
-
+    test_path = testcase_dir_path + '/手机银行'
     if request.is_ajax():
         kwargs = json.loads(request.body.decode('utf-8'))
         test_list = kwargs.pop('id')
@@ -285,7 +289,12 @@ def run_batch_test(request):
         type = kwargs.pop('type')
         report_name = kwargs.get('report_name', None)
         run_by_batch(test_list, base_url, testcase_dir_path, type=type)
-        main_hrun.delay(testcase_dir_path, report_name)
+        # 新增
+        run_test_by_env(test_path)
+        # 获取套件名称
+        module = query_module(id)
+        suite_path = test_path + '/testsuites/' + module + '_testsuite.yml'
+        main_hrun.delay(testcase_dir_path,suite_path, report_name)
         return HttpResponse('用例执行中，请稍后查看报告即可,默认时间戳命名报告')
     else:
         type = request.POST.get('type', None)

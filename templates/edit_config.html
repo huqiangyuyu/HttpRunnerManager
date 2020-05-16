@@ -92,10 +92,10 @@
                             </tr>
                             </thead>
                             <tbody>
-                            {% for foo in request.variables %}
+                            {% for key, value in request.variables.items %}
                                 <tr>
                                     <td><input type="checkbox" name="variables" style="width:55px"></td>
-                                    {% for key, value in foo.items %}
+{#                                    {% for key, value in foo.items %}#}
                                         <td><input type="text" name='test[][key]'
                                                    value="{{ key }}" style="width:100%; border: none"></td>
                                         <td>
@@ -127,7 +127,7 @@
                                         </td>
                                         <td><input type="text" name='test[][value]' value="{{ value }}"
                                                    style="width:100%; border: none"></td>
-                                    {% endfor %}
+{#                                    {% endfor %}#}
                                 </tr>
                             {% endfor %}
                             </tbody>
