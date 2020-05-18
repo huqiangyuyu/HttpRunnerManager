@@ -23,7 +23,14 @@
                                    placeholder="模块名称" value="">
                         </div>
                     </div>
-
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="module_alias"
+                               style="font-weight: inherit; font-size: small ">模块英文名：</label>
+                        <div class="col-sm-9">
+                            <input name="module_alias" type="text" class="form-control" id="module_alias"
+                                   placeholder="模块英文名" value="">
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="belong_project"
                                style="font-weight: inherit; font-size: small ">所属项目：</label>
@@ -188,6 +195,7 @@
                     <th class="table-check"><input type="checkbox" id="select_all"/></th>
                     <th class="table-title">序号</th>
                     <th class="table-type">模块名称</th>
+                    <th class="table-type">模块英文名</th>
                     <th class="table-type">测试人员</th>
                     <th class="table-type">所属项目</th>
                     <th class="table-type">用例/配置</th>
@@ -202,9 +210,10 @@
                         <td><input type="checkbox" name="module_{{ foo.id }}" value="{{ foo.id }}"/></td>
                         <td>{{ forloop.counter }}</td>
                         <td><a href="#"
-                               onclick="edit('{{ foo.id }}','{{ foo.module_name }}', '{{ foo.belong_project.project_name }}'
+                               onclick="edit('{{ foo.id }}','{{ foo.module_name }}','{{ foo.module_alias }}', '{{ foo.belong_project.project_name }}'
                                        , '{{ foo.test_user }}', '{{ foo.simple_desc }}', '{{ foo.other_desc }}')">{{ foo.module_name }}</a>
                         </td>
+                        <td>{{ foo.module_alias }}</td>
                         <td>{{ foo.test_user }}</td>
                         <td>{{ foo.belong_project.project_name }}</td>
                         {% for key, value in sum.items %}
@@ -224,7 +233,7 @@
                                     <button type="button"
                                             class="am-btn am-btn-default am-btn-xs am-text-secondary am-round"
                                             data-am-popover="{content: '编辑', trigger: 'hover focus'}"
-                                            onclick="edit('{{ foo.id }}','{{ foo.module_name }}', '{{ foo.belong_project.project_name }}'
+                                            onclick="edit('{{ foo.id }}','{{ foo.module_name }}','{{ foo.module_alias }}', '{{ foo.belong_project.project_name }}'
                                                     , '{{ foo.test_user }}', '{{ foo.simple_desc }}', '{{ foo.other_desc }}')"> <span
                                             class="am-icon-pencil-square-o"></span></button>
                                     <button type="button"
@@ -258,9 +267,10 @@
         </form>
     </div>
     <script type="text/javascript">
-        function edit(id, module_name, belong_project, test_user, simple_desc, other_desc) {
+        function edit(id, module_name, module_alias, belong_project, test_user, simple_desc, other_desc) {
             $('#index').val(id);
             $('#module_name').val(module_name);
+            $('#module_alias').val(module_alias);
             $('#belong_project').val(belong_project);
             $('#test_user').val(test_user);
             $('#simple_desc').val(simple_desc);

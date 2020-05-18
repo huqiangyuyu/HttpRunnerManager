@@ -61,6 +61,7 @@ class ModuleInfo(BaseTable):
         db_table = 'ModuleInfo'
 
     module_name = models.CharField('模块名称', max_length=50, null=False)
+    module_alias = models.CharField('模块英文名', max_length=50, null=False)
     belong_project = models.ForeignKey(ProjectInfo, on_delete=models.CASCADE)
     test_user = models.CharField('测试负责人', max_length=50, null=False)
     simple_desc = models.CharField('简要描述', max_length=100, null=True)

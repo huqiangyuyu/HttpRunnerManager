@@ -261,9 +261,9 @@ def run_test(request):
         suite_path = test_path + '/testsuites/'+ module+'_testsuite.yml'
         summary = runner.run(suite_path)
         shutil.rmtree(testcase_dir_path)
-        runner.summary = timestamp_to_datetime(summary, type=False)
+        summary = timestamp_to_datetime(summary, type=False)
 
-        return render_to_response('report_template.html', runner.summary)
+        return render_to_response('report_template.html', summary)
 
 
 @login_check
@@ -305,12 +305,12 @@ def run_batch_test(request):
         else:
             run_by_batch(test_list, base_url, testcase_dir_path)
 
-        runner.run(testcase_dir_path)
+        summary = runner.run(testcase_dir_path)
 
         shutil.rmtree(testcase_dir_path)
-        runner.summary = timestamp_to_datetime(runner.summary,type=False)
+        runner.summary = timestamp_to_datetime(summary,type=False)
 
-        return render_to_response('report_template.html', runner.summary)
+        return render_to_response('extent_report_template.html', summary)
 
 
 @login_check

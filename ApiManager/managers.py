@@ -71,6 +71,7 @@ class ModuleInfoManager(models.Manager):
     def update_module(self, id, **kwargs):
         obj = self.get(id=id)
         obj.module_name = kwargs.get('module_name')
+        obj.module_alias = kwargs.get('module_alias')
         obj.test_user = kwargs.get('test_user')
         obj.simple_desc = kwargs.get('simple_desc')
         obj.other_desc = kwargs.get('other_desc')
