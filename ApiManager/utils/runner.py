@@ -107,7 +107,7 @@ def run_by_single_suite(index, base_url, path):
     request = eval(obj.request)
     name = obj.name
     project = obj.belong_project
-    module = obj.belong_module.module_name
+    module = obj.belong_module.module_alias
 
     config['config']['name'] = name
 
@@ -149,7 +149,14 @@ def run_by_single_suite(index, base_url, path):
                 testcase_dict['config'] = config_request['config']
                 #获取套件用例
                 pre_suite = 'testcases/' + module + '/' + name + '.yml'
-                suite_data = {'name': name, 'testcase': pre_suite}
+                if 'name' in request['test']['request']['data']:
+                    suite_name = request['test']['request']['data']['name']
+                else:
+                    suite_name = name
+                if 'parameters' in request['test']:
+                    suite_data = {'name': suite_name, 'testcase': pre_suite,'parameters':request['test']['parameters']}
+                else:
+                    suite_data = {'name': suite_name, 'testcase': pre_suite}
                 # suite_list.append(suite_data)
             else:
                 id = test_info[0]
@@ -172,7 +179,8 @@ def run_by_single_suite(index, base_url, path):
     if request['test']['request']['url'] != '':
         testcase_list.append(request)
     # suite_dict['testcases'] = suite_list
-    dump_yaml_file(os.path.join(case_dir_path, name + '.yml'), testcase_dict)
+    path = os.path.join(case_dir_path, name + '.yml')
+    dump_yaml_file(path, testcase_dict)
     test_suite = module + '_testsuite.yml'
 
     return suite_dir_path,test_suite,suite_data
@@ -301,5 +309,5 @@ def query_module(index):
     include = eval(obj.include)
     id = include[0][0]
     obj = TestCaseInfo.objects.get(id=id)
-    module = obj.belong_module.module_name
+    module = obj.belong_module.module_alias
     return module

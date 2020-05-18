@@ -563,7 +563,6 @@ def add_test_reports(runner, report_name=None):
     runner.gen_html_report(runner.summary,report_template=os.path.join(os.getcwd(), "templates{}extent_report_template.html".format(separator)))
     with open(report_path, encoding='utf-8') as stream:
         reports = stream.read()
-    print(ll)
     test_reports = {
         'report_name': report_name,
         'status': runner.summary.get('success'),
