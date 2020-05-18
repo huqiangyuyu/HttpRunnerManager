@@ -305,7 +305,10 @@ def run_batch_test(request):
         else:
             run_by_batch(test_list, base_url, testcase_dir_path)
 
-        summary = runner.run(testcase_dir_path)
+        run_test_by_env(test_path)
+        # 获取套件名称
+        suite_path = test_path + '/testsuites/TFbank_testsuite.yml'
+        summary = runner.run(suite_path)
 
         shutil.rmtree(testcase_dir_path)
         runner.summary = timestamp_to_datetime(summary,type=False)
