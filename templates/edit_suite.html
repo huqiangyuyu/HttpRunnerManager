@@ -17,13 +17,16 @@
                                 <div class="input-group-addon" style="color: #0a628f">项目列表</div>
                                 <select id='belong_project' name="project" class="form-control"
                                         onchange="auto_load('#form_message', '/api/add_case/', '#belong_module_id', 'module')">
-                                    <option value="{{ info.belong_project.project_name }}">{{ info.belong_project.project_name }}</option>
+                                     <option value="请选择">请选择</option>
+{#                                    <option value="{{ info.belong_project.project_name }}">{{ info.belong_project.project_name }}</option>#}
                                     {% for foo in project %}
-                                        {% if info.belong_project.project_name != foo.project_name %}
-                                            <option value="{{ foo.project_name }}">{{ foo.project_name }}</option>
-                                        {% endif %}
-
+{#                                        {% if info.belong_project.project_name != foo.project_name %}#}
+{#                                            <option value="{{ foo.project_name }}">{{ foo.project_name }}</option>#}
+{#                                        {% endif %}#}
+                                        <option value="{{ foo.project_name }}">{{ foo.project_name }}</option>
+{##}
                                     {% endfor %}
+{#                                    <option value="请选择">请选择</option>#}
                                 </select>
                             </div>
                         </div>
