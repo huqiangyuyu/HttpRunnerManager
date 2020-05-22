@@ -767,6 +767,138 @@ def upload_file_logic(files, project, module, account):
 		# 	add_case_data(type=True, **content)
 
 
+def upload_file_logi(files, project, module, account):
+	"""
+	解析yaml或者json用例
+	:param files:
+	:param project:
+	:param module:
+	:param account:
+	:return:
+	"""
+
+	for file in files:
+		file_suffix = os.path.splitext(file)[1].lower()
+		if file_suffix == '.json':
+			with io.open(file, encoding='utf-8') as data_file:
+				try:
+					content = json.load(data_file)
+				except JSONDecodeError:
+					err_msg = u"JSONDecodeError: JSON file format error: {}".format(file)
+					logging.error(err_msg)
+
+		elif file_suffix in ['.yaml', '.yml']:
+			with io.open(file, 'r', encoding='utf-8') as stream:
+				content = yaml.load(stream)
+
+		# for test_case in content.keys():
+		test_dict = {
+			'project': project,
+			'module': module,
+			'author': account,
+			'include': []
+		}
+
+		case_dict = {}
+		config_dict = {}
+		config_list = []
+		api_list = []
+		case_name = ''
+		validate_dict = {}
+		extract_dict ={}
+		add_case = {'test':{'case_info':{
+			'project': project,
+			'module': module,
+			'author': account,
+			'include': []
+		},'request': {
+			'url': '',
+			'method': ''
+		}}}
+		if 'config' in content.keys():
+			content['config']['config_info'] = test_dict
+			# add_case['test']['case_info'] = test_dict
+			case_dict['teststeps'] = content.get('teststeps')
+			config_dict['config']=content.get('config')
+			case_name = content['config']['name']
+			config_dict['config']['name']= content['config']['name'] + '_config'
+			config_dict['config']['request'] = {}
+			name = content['config']['name']
+			add_case['test']['name'] = case_name
+			# api_list = content['config']['config_info']['include']
+			add_config_data(type=True, **config_dict)
+			case_id = query_config_id(name)
+			# module_name = query_module_name(module)[case_id, name]
+			config_list.append(case_id)
+			config_list.append(name)
+			add_case['test']['case_info']['config'] = json.dumps({'config': config_list})
+			api_list.append(config_list)
+			for i in range(len(case_dict['teststeps'])):
+				#添加api接口
+				api_dict = {
+					'teststeps': {
+						'api_info': {'project': project, 'module': module,
+									 'author': account, 'include': []}}
+				}
+				api_dict['teststeps']['name'] = content['teststeps'][i]['name']
+				api_dict['teststeps']['request'] = content['teststeps'][i]['request']
+				add_api_data(type=True, **api_dict)
+				validate_dict = content['teststeps'][i]['validate']
+				try:
+					extract_dict = content['teststeps'][i]['extract']
+				except :
+					extract_dict = '不存在extract'
+				api_name = content['teststeps'][i]['name']
+				api_id = query_api_id(api_name,module)
+				apiList = [api_id,api_name[0]]
+				api_list.append(apiList)
+				add_case['test']['case_info']['include'] = api_list
+				#更新api接口
+				update_api_data(api_id, validate_dict, extract_dict)
+			add_case_data(type=True, **add_case)
+
+
+
+		# 	content.pop('teststeps')
+		#
+		# if 'request' in content.keys():
+		# 	content.pop('base_url')
+		# 	content['api_info'] = test_dict
+		# 	api_dict['teststeps'] = content
+		# 	add_api_data(type=True, **api_dict)
+		# if 'teststeps' in content.keys():  # 忽略config
+		# 	content['case_info'] = test_dict
+		#
+		# 	if 'validate' in content.get('test').keys():  # 适配validate两种格式
+		# 		validate = content.get('test').pop('validate')
+		# 		new_validate = []
+		# 		for check in validate:
+		# 			if 'comparator' not in check.keys():
+		# 				for key, value in check.items():
+		# 					tmp_check = {"check": value[0], "comparator": key, "expected": value[1]}
+		# 					new_validate.append(tmp_check)
+		#
+		# 		content.get('test')['validate'] = new_validate
+		#
+		# 	add_case_data(type=True, **content)
+
+
+		# if 'test' in content.keys():  # 忽略config
+		# 	content.get('test')['case_info'] = test_dict
+		#
+		# 	if 'validate' in content.get('test').keys():  # 适配validate两种格式
+		# 		validate = content.get('test').pop('validate')
+		# 		new_validate = []
+		# 		for check in validate:
+		# 			if 'comparator' not in check.keys():
+		# 				for key, value in check.items():
+		# 					tmp_check = {"check": value[0], "comparator": key, "expected": value[1]}
+		# 					new_validate.append(tmp_check)
+		#
+		# 		content.get('test')['validate'] = new_validate
+		#
+		# 	add_case_data(type=True, **content)
+
 def get_total_values():
 	total = {
 		'pass': [],

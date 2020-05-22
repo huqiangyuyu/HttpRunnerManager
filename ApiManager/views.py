@@ -17,7 +17,7 @@ from ApiManager.models import ProjectInfo, ModuleInfo, TestCaseInfo, UserInfo, E
 from ApiManager.tasks import main_hrun
 from ApiManager.utils.common import module_info_logic, project_info_logic, case_info_logic, config_info_logic, \
     set_filter_session, get_ajax_msg, register_info_logic, task_logic, load_modules, upload_file_logic, \
-    init_filter_session, get_total_values, timestamp_to_datetime,api_info_logic
+    init_filter_session, get_total_values, timestamp_to_datetime,api_info_logic,upload_file_logi
 from ApiManager.utils.operation import env_data_logic, del_module_data, del_project_data, del_test_data, copy_test_data, \
     del_report_data, add_suite_data, copy_suite_data, del_suite_data, edit_suite_data, add_test_reports
 from ApiManager.utils.pagination import get_pager_info
@@ -724,8 +724,8 @@ def upload_file(request):
             except IOError as e:
                 return JsonResponse({"status": e})
 
-        upload_file_logic(file_list, project_name, module_name, account)
-
+        # upload_file_logic(file_list, project_name, module_name, account)
+        upload_file_logi(file_list, project_name, module_name, account)
         return JsonResponse({'status': '/api/test_list/1/'})
 
 

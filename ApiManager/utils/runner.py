@@ -149,7 +149,7 @@ def run_by_single_suite(index, base_url, path):
                 testcase_dict['config'] = config_request['config']
                 #获取套件用例
                 pre_suite = 'testcases/' + module + '/' + name + '.yml'
-                if 'name' in request['test']['request']['data']:
+                if 'data' in request['test']['request']:
                     suite_name = request['test']['request']['data']['name']
                 else:
                     suite_name = name
