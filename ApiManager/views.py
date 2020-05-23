@@ -21,7 +21,8 @@ from ApiManager.utils.common import module_info_logic, project_info_logic, case_
 from ApiManager.utils.operation import env_data_logic, del_module_data, del_project_data, del_test_data, copy_test_data, \
     del_report_data, add_suite_data, copy_suite_data, del_suite_data, edit_suite_data, add_test_reports
 from ApiManager.utils.pagination import get_pager_info
-from ApiManager.utils.runner import run_by_batch, run_test_by_type,run_test_by_env,query_module
+from ApiManager.utils.runner import run_by_batch, run_test_by_type, \
+    run_test_by_env, query_module, query_case
 from ApiManager.utils.task_opt import delete_task, change_task_status
 from ApiManager.utils.testcase import get_time_stamp
 from httprunner.api import HttpRunner
@@ -256,9 +257,14 @@ def run_test(request):
 
         run_test_by_type(id, base_url, testcase_dir_path, type)
         run_test_by_env(test_path)
+        if type == 'test':
+            name = query_case(id)
+            suite_path = test_path + '/testcases/'+ name+'.yml'
         #获取套件名称
-        module = query_module(id)
-        suite_path = test_path + '/testsuites/'+ module+'_testsuite.yml'
+        else:
+            # type == 'suite':
+            module = query_module(id)
+            suite_path = test_path + '/testsuites/'+ module+'_testsuite.yml'
         summary = runner.run(suite_path)
         shutil.rmtree(testcase_dir_path)
         summary = timestamp_to_datetime(summary, type=False)

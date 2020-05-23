@@ -13,6 +13,23 @@ def run_by_single(index, base_url, path):
     :param base_url: str：环境地址
     :return: dict
     """
+    # obj = TestSuite.objects.get(id=index)
+	#
+    # include = eval(obj.include)
+    # suite_dict = {'config':
+    #                   {'name': 'testsuite'}}
+    # list_data = []
+    # try:
+    #     for val in include:
+    #         suite_dir_path, test_suite, suite_data = run_by_single_suite(val[0],
+    #                                                                      base_url,
+    #                                                                      path)
+    #         list_data.append(suite_data)
+    #     suite_dict['testcases'] = list_data
+    #
+    # except:
+    #     print('数据格式错误')
+
     config = {
         'config': {
             'name': '',
@@ -22,8 +39,11 @@ def run_by_single(index, base_url, path):
         }
     }
     testcase_list = []
+    api_dict = {}
+    # suite_list = []
+    testcase_dict = {}
 
-    testcase_list.append(config)
+    # testcase_list.append(config)
 
     try:
         obj = TestCaseInfo.objects.get(id=index)
@@ -34,7 +54,7 @@ def run_by_single(index, base_url, path):
     request = eval(obj.request)
     name = obj.name
     project = obj.belong_project
-    module = obj.belong_module.module_name
+    module = obj.belong_module.module_alias
 
     config['config']['name'] = name
 
@@ -44,36 +64,117 @@ def run_by_single(index, base_url, path):
         os.makedirs(testcase_dir_path)
 
         try:
-            debugtalk = DebugTalk.objects.get(belong_project__project_name=project).debugtalk
+            debugtalk = DebugTalk.objects.get(
+                belong_project__project_name=project).debugtalk
         except ObjectDoesNotExist:
             debugtalk = ''
 
-        dump_python_file(os.path.join(testcase_dir_path, 'debugtalk.py'), debugtalk)
-    testcase_dir_path = os.path.join(testcase_dir_path, module)
+        dump_python_file(os.path.join(testcase_dir_path, 'debugtalk.py'),
+                         debugtalk)
 
-    if not os.path.exists(testcase_dir_path):
-        os.mkdir(testcase_dir_path)
-
+    api_dir_path = os.path.join(testcase_dir_path, 'api')
+    case_dir_path = os.path.join(testcase_dir_path, 'testcases')
+    if not os.path.exists(api_dir_path):
+        os.mkdir(api_dir_path)
+    if not os.path.exists(case_dir_path):
+        os.mkdir(case_dir_path)
     for test_info in include:
         try:
             if isinstance(test_info, dict):
                 config_id = test_info.pop('config')[0]
-                config_request = eval(TestCaseInfo.objects.get(id=config_id).request)
-                config_request.get('config').get('request').setdefault('base_url', base_url)
+                config_request = eval(
+                    TestCaseInfo.objects.get(id=config_id).request)
+                # config_request.get('config').get('request').setdefault('base_url', base_url)
+                config_request['config'].pop('request')
                 config_request['config']['name'] = name
-                testcase_list[0] = config_request
+                testcase_dict['config'] = config_request['config']
+
             else:
                 id = test_info[0]
+                api_name = test_info[1]
                 pre_request = eval(ApiInfo.objects.get(id=id).request)
-                testcase_list.append(pre_request)
+                api_dict['request'] = pre_request['teststeps']['request']
+                api_dict['name'] = api_name
+                api_dict['base_url'] = 'http://' + base_url
+                dump_yaml_file(os.path.join(api_dir_path, api_name + '.yml'),
+                               api_dict)
+                pre_request['teststeps'].pop('request')
+                pre_request['teststeps'][
+                    'api'] = 'api/'  + api_name + '.yml'
+
+                testcase_list.append(pre_request['teststeps'])
+                testcase_dict['teststeps'] = testcase_list
 
         except ObjectDoesNotExist:
             return testcase_list
 
     if request['test']['request']['url'] != '':
         testcase_list.append(request)
+    # suite_dict['testcases'] = suite_list
+    path = os.path.join(case_dir_path, name + '.yml')
+    dump_yaml_file(path, testcase_dict)
 
-    dump_yaml_file(os.path.join(testcase_dir_path, name + '.yml'), testcase_list)
+    # config = {
+    #     'config': {
+    #         'name': '',
+    #         'request': {
+    #             'base_url': base_url
+    #         }
+    #     }
+    # }
+    # testcase_list = []
+	#
+    # testcase_list.append(config)
+	#
+    # try:
+    #     obj = TestCaseInfo.objects.get(id=index)
+    # except ObjectDoesNotExist:
+    #     return testcase_list
+	#
+    # include = eval(obj.include)
+    # request = eval(obj.request)
+    # name = obj.name
+    # project = obj.belong_project
+    # module = obj.belong_module.module_name
+	#
+    # config['config']['name'] = name
+	#
+    # testcase_dir_path = os.path.join(path, project)
+	#
+    # if not os.path.exists(testcase_dir_path):
+    #     os.makedirs(testcase_dir_path)
+	#
+    #     try:
+    #         debugtalk = DebugTalk.objects.get(belong_project__project_name=project).debugtalk
+    #     except ObjectDoesNotExist:
+    #         debugtalk = ''
+	#
+    #     dump_python_file(os.path.join(testcase_dir_path, 'debugtalk.py'), debugtalk)
+    # testcase_dir_path = os.path.join(testcase_dir_path, module)
+	#
+    # if not os.path.exists(testcase_dir_path):
+    #     os.mkdir(testcase_dir_path)
+	#
+    # for test_info in include:
+    #     try:
+    #         if isinstance(test_info, dict):
+    #             config_id = test_info.pop('config')[0]
+    #             config_request = eval(TestCaseInfo.objects.get(id=config_id).request)
+    #             config_request.get('config').get('request').setdefault('base_url', base_url)
+    #             config_request['config']['name'] = name
+    #             testcase_list[0] = config_request
+    #         else:
+    #             id = test_info[0]
+    #             pre_request = eval(ApiInfo.objects.get(id=id).request)
+    #             testcase_list.append(pre_request)
+	#
+    #     except ObjectDoesNotExist:
+    #         return testcase_list
+	#
+    # if request['test']['request']['url'] != '':
+    #     testcase_list.append(request)
+	#
+    # dump_yaml_file(os.path.join(testcase_dir_path, name + '.yml'), testcase_list)
 
 
 def run_by_single_suite(index, base_url, path):
@@ -311,3 +412,8 @@ def query_module(index):
     obj = TestCaseInfo.objects.get(id=id)
     module = obj.belong_module.module_alias
     return module
+
+def query_case(index):
+    obj = TestCaseInfo.objects.get(id=index)
+    name = obj.name
+    return name
