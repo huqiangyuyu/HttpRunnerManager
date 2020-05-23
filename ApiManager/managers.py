@@ -87,6 +87,14 @@ class ModuleInfoManager(models.Manager):
             else:
                 return self.get(id=module_name)
 
+    def get_module_alias(self, module_name=None, type=True, id=None):
+        if type:
+            return self.filter(module_name__exact=module_name).count()
+        else:
+            if id is not None:
+                return self.get(id=id).module_alias
+            else:
+                return self.get(id=module_name)
 
 
 '''用例信息表操作'''
@@ -193,6 +201,9 @@ class ApiInfoManager(models.Manager):
     def get_api_id(self, name,module):
         # return self.get(name=name).filter(belong_module=module).id
         return self.get(name=name,belong_module=module).id
+    def query_api_name(self, name,module):
+        # return self.get(name=name).filter(belong_module=module).id
+        return self.filter(belong_module=module).filter(name__contains=name).values('request')
     def get_api_request(self, id):
         # return self.get(name=name).filter(belong_module=module).id
         return self.get(id=id).request

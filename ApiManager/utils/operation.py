@@ -1,6 +1,6 @@
 import datetime
 import logging
-import os,json
+import os,json,ast
 
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import DataError
@@ -270,6 +270,17 @@ def query_module_name(id):
     module_name = module_opt.get_module_name(type=False, id=id)
     return module_name
 
+def query_module_alias(id):
+    """
+    配置信息落地
+    :param type: boolean: true: 添加新配置， fasle: 更新配置
+    :param kwargs: dict
+    :return: ok or tips
+    """
+    module_opt = ModuleInfo.objects
+    module_alias = module_opt.get_module_alias(type=False, id=id)
+    return module_alias
+
 def query_api_id(name,module):
     """
     配置信息落地
@@ -280,6 +291,51 @@ def query_api_id(name,module):
     api_opt = ApiInfo.objects
     api_id = api_opt.get_api_id(name,module)
     return api_id
+
+def query_api_name(api_dict):
+    """
+    查询接口名,判断接口是否存在
+    :param type: boolean: true: 添加新配置， fasle: 更新配置
+    :param kwargs: dict
+    :return: ok or tips
+    """
+    name = api_dict['teststeps']['name']
+    module = api_dict['teststeps']['api_info']['module']
+    api_opt = ApiInfo.objects
+    api_set = api_opt.query_api_name(name,module)
+    return api_set
+
+def check_api_name(api_dict,api_set):
+    """
+    对比两个api是否相同
+    :param type: boolean: true: 添加新配置， fasle: 更新配置
+    :param kwargs: dict
+    :return: ok or tips
+    """
+    tag = 0
+    name = api_dict['teststeps']['name']
+    module = api_dict['teststeps']['api_info']['module']
+    module_alias = query_module_alias(module)
+    sum = api_set.count()
+    for line in api_set:
+        teststeps = line['request']
+        teststeps_dict = ast.literal_eval(teststeps)
+        if 'json' in teststeps_dict['teststeps']['request'].keys():
+            repeat_list = teststeps_dict['teststeps']['request']['json']
+            api_list = api_dict['teststeps']['request']['json']
+        else:
+            repeat_list = teststeps_dict['teststeps']['request']['files']
+            api_list = api_dict['teststeps']['request']['files']
+        # if  teststep_dict_api['name'] in repeat_list.keys():
+        if  api_list.keys() == repeat_list.keys():
+            tag = 0
+            break
+        else:
+            tag = 1
+
+    if tag == 1:
+        api_dict['teststeps']['name'] = module_alias + '_0' + str(sum) + name
+    return tag,api_dict
 
 def add_config_data(type, **kwargs):
     """

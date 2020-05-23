@@ -12,8 +12,10 @@ from django.db.models import Sum
 from djcelery.models import PeriodicTask
 
 from ApiManager.models import ModuleInfo, TestCaseInfo, TestReports, TestSuite, ApiInfo
-from ApiManager.utils.operation import add_project_data, add_module_data, add_case_data, add_config_data, \
-	add_register_data,add_api_data,query_config_id,query_api_id,query_module_name,update_api_data
+from ApiManager.utils.operation import add_project_data, add_module_data, \
+	add_case_data, add_config_data, \
+	add_register_data, add_api_data, query_config_id, query_api_id, \
+	query_module_name, update_api_data, query_api_name, check_api_name
 from ApiManager.utils.task_opt import create_task
 
 
@@ -842,7 +844,13 @@ def upload_file_logi(files, project, module, account):
 				}
 				api_dict['teststeps']['name'] = content['teststeps'][i]['name']
 				api_dict['teststeps']['request'] = content['teststeps'][i]['request']
-				add_api_data(type=True, **api_dict)
+				api_set = query_api_name(api_dict)
+				if api_set.exists():
+					tag,api_dict = check_api_name(api_dict,api_set)
+					if tag == 1:
+						add_api_data(type=True, **api_dict)
+				else:
+					add_api_data(type=True, **api_dict)
 				validate_dict = content['teststeps'][i]['validate']
 				try:
 					extract_dict = content['teststeps'][i]['extract']
