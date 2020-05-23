@@ -858,7 +858,7 @@ def upload_file_logi(files, project, module, account):
 					extract_dict = '不存在extract'
 				api_name = content['teststeps'][i]['name']
 				api_id = query_api_id(api_name,module)
-				apiList = [api_id,api_name[0]]
+				apiList = [api_id,api_name]
 				api_list.append(apiList)
 				add_case['test']['case_info']['include'] = api_list
 				#更新api接口
