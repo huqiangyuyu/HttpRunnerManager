@@ -317,6 +317,7 @@ def check_api_name(api_dict,api_set):
     module = api_dict['teststeps']['api_info']['module']
     module_alias = query_module_alias(module)
     sum = api_set.count()
+    # black_list = ['sendVerificationCode','checkVerificationCode']
     for line in api_set:
         teststeps = line['request']
         teststeps_dict = ast.literal_eval(teststeps)
@@ -327,7 +328,8 @@ def check_api_name(api_dict,api_set):
             repeat_list = teststeps_dict['teststeps']['request']['files']
             api_list = api_dict['teststeps']['request']['files']
         # if  teststep_dict_api['name'] in repeat_list.keys():
-        if  api_list.keys() == repeat_list.keys():
+        # if  api_list.keys() == repeat_list.keys() and name not in black_list:
+        if api_list.keys() == repeat_list.keys():
             tag = 0
             break
         else:

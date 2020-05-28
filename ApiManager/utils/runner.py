@@ -113,7 +113,7 @@ def run_by_single(index, base_url, path):
     # suite_dict['testcases'] = suite_list
     path = os.path.join(case_dir_path, name + '.yml')
     dump_yaml_file(path, testcase_dict)
-
+    return case_dir_path
     # config = {
     #     'config': {
     #         'name': '',
@@ -295,6 +295,7 @@ def run_by_suite(index, base_url, path):
     suite_dict = {'config':
                       {'name': 'testsuite'}}
     list_data = []
+    suite_dir_path = ''
     try:
         for val in include:
             suite_dir_path,test_suite,suite_data = run_by_single_suite(val[0], base_url, path)
@@ -303,6 +304,7 @@ def run_by_suite(index, base_url, path):
         dump_yaml_file(os.path.join(suite_dir_path, test_suite), suite_dict)
     except:
         print('数据格式错误')
+    return suite_dir_path
 
 
 def run_by_batch(test_list, base_url, path, type=None, mode=False):
@@ -380,9 +382,10 @@ def run_test_by_type(id, base_url, path, type):
     elif type == 'module':
         run_by_module(id, base_url, path)
     elif type == 'suite':
-        run_by_suite(id, base_url, path)
+        path = run_by_suite(id, base_url, path)
     else:
-        run_by_single(id, base_url, path)
+        path = run_by_single(id, base_url, path)
+    return path
 
 def run_test_by_env(path):
     #加载配置信息

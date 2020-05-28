@@ -235,18 +235,20 @@ def run_test(request):
     runner = HttpRunner(**kwargs)
     testcase_dir_path = os.path.join(os.getcwd(), "suite")
     testcase_dir_path = os.path.join(testcase_dir_path, get_time_stamp())
-    test_path = testcase_dir_path + '/手机银行'
+    # test_path = testcase_dir_path + '/手机银行'
     if request.is_ajax():
         kwargs = json.loads(request.body.decode('utf-8'))
         id = kwargs.pop('id')
         base_url = kwargs.pop('env_name')
         type = kwargs.pop('type')
-        run_test_by_type(id, base_url, testcase_dir_path, type)
+        path = run_test_by_type(id, base_url, testcase_dir_path, type)
+        test_path = os.path.dirname(path)
+
         #新增
         run_test_by_env(test_path)
         # 获取套件名称
         module = query_module(id)
-        suite_path = test_path + '/testsuites/' + module + '_testsuite.yml'
+        suite_path = path + '\\'+module + '_testsuite.yml'
         report_name = kwargs.get('report_name', None)
         main_hrun.delay(suite_path, testcase_dir_path,report_name)
         return HttpResponse('用例执行中，请稍后查看报告即可,默认时间戳命名报告')
@@ -255,7 +257,8 @@ def run_test(request):
         base_url = request.POST.get('env_name')
         type = request.POST.get('type', 'test')
 
-        run_test_by_type(id, base_url, testcase_dir_path, type)
+        path = run_test_by_type(id, base_url, testcase_dir_path, type)
+        test_path = os.path.dirname(path)
         run_test_by_env(test_path)
         if type == 'test':
             name = query_case(id)
@@ -264,7 +267,7 @@ def run_test(request):
         else:
             # type == 'suite':
             module = query_module(id)
-            suite_path = test_path + '/testsuites/'+ module+'_testsuite.yml'
+            suite_path = path + '\\'+module+'_testsuite.yml'
         summary = runner.run(suite_path)
         shutil.rmtree(testcase_dir_path)
         summary = timestamp_to_datetime(summary, type=False)
