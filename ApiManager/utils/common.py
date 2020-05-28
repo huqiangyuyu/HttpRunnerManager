@@ -856,7 +856,8 @@ def upload_file_logi(files, project, module, account):
 					extract_dict = content['teststeps'][i]['extract']
 				except :
 					extract_dict = '不存在extract'
-				api_name = content['teststeps'][i]['name']
+				# api_name = content['teststeps'][i]['name']
+				api_name = api_dict['teststeps']['name']
 				api_id = query_api_id(api_name,module)
 				apiList = [api_id,api_name]
 				api_list.append(apiList)
