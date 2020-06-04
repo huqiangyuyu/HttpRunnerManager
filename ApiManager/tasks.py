@@ -119,21 +119,22 @@ def suite_hrun(name, base_url, suite, receiver):
     }
     runner = HttpRunner(**kwargs)
     suite = list(suite)
-
+    suite_dir_path = ''
     testcase_dir_path = os.path.join(os.getcwd(), "suite")
     testcase_dir_path = os.path.join(testcase_dir_path, get_time_stamp())
 
     try:
         for value in suite:
-            run_by_suite(value[0], base_url, testcase_dir_path)
+            path = run_by_suite(value[0], base_url, testcase_dir_path)
+            suite_dir_path = path + '\\' + 'TFbank_testsuite.yml'
     except ObjectDoesNotExist:
         return '找不到Suite信息'
 
-    runner.run(testcase_dir_path)
+    summary = runner.run(suite_dir_path)
 
     shutil.rmtree(testcase_dir_path)
 
-    runner.summary = timestamp_to_datetime(runner.summary)
+    runner.summary = timestamp_to_datetime(summary)
     report_path = add_test_reports(runner, report_name=name)
 
     if receiver != '':
