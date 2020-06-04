@@ -247,8 +247,8 @@ def run_test(request):
         #新增
         run_test_by_env(test_path)
         # 获取套件名称
-        module = query_module(id)
-        suite_path = path + '\\'+module + '_testsuite.yml'
+        # module = query_module(id)
+        suite_path = path + '/TFbank_testsuite.yml'
         report_name = kwargs.get('report_name', None)
         main_hrun.delay(suite_path, testcase_dir_path,report_name)
         return HttpResponse('用例执行中，请稍后查看报告即可,默认时间戳命名报告')
@@ -266,8 +266,8 @@ def run_test(request):
         #获取套件名称
         else:
             # type == 'suite':
-            module = query_module(id)
-            suite_path = path + '\\'+module+'_testsuite.yml'
+            # module = query_module(id)
+            suite_path = path + '/TFbank_testsuite.yml'
         summary = runner.run(suite_path)
         shutil.rmtree(testcase_dir_path)
         summary = timestamp_to_datetime(summary, type=False)
@@ -668,14 +668,17 @@ def periodictask(request, id):
         return HttpResponse(get_ajax_msg(msg, 'ok'))
     else:
         filter_query = set_filter_session(request)
+        print(filter_query)
         task_list = get_pager_info(
             PeriodicTask, filter_query, '/api/periodictask/', id)
+        print(task_list)
         manage_info = {
             'account': account,
             'task': task_list[1],
             'page_list': task_list[0],
             'info': filter_query
         }
+        print(manage_info)
     return render_to_response('periodictask_list.html', manage_info)
 
 
