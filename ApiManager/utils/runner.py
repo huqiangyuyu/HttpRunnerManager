@@ -212,7 +212,7 @@ def run_by_single_suite(index, base_url, path):
 
     config['config']['name'] = name
 
-    testcase_dir_path = os.path.join(path, project)
+    testcase_dir_path = os.path.join(path, 'TFbank')
 
     if not os.path.exists(testcase_dir_path):
         os.makedirs(testcase_dir_path)
@@ -246,18 +246,22 @@ def run_by_single_suite(index, base_url, path):
                 config_request = eval(TestCaseInfo.objects.get(id=config_id).request)
                 # config_request.get('config').get('request').setdefault('base_url', base_url)
                 config_request['config'].pop('request')
-                config_request['config']['name'] = name
-                testcase_dict['config'] = config_request['config']
+                # parameters = config_request['config'].pop('parameters')
+                # config_request['config']['name'] = name
+                # testcase_dict['config'] = config_request['config']
                 #获取套件用例
                 pre_suite = 'testcases/' + module + '/' + name + '.yml'
                 if 'data' in request['test']['request']:
                     suite_name = request['test']['request']['data']['name']
                 else:
                     suite_name = name
-                if 'parameters' in request['test']:
-                    suite_data = {'name': suite_name, 'testcase': pre_suite,'parameters':request['test']['parameters']}
+                if 'parameters' in config_request['config']:
+                    suite_data = {'name': suite_name, 'testcase': pre_suite,'parameters':config_request['config']['parameters']}
+                    config_request['config'].pop('parameters')
                 else:
                     suite_data = {'name': suite_name, 'testcase': pre_suite}
+                config_request['config']['name'] = name
+                testcase_dict['config'] = config_request['config']
                 # suite_list.append(suite_data)
             else:
                 id = test_info[0]
@@ -282,9 +286,9 @@ def run_by_single_suite(index, base_url, path):
     # suite_dict['testcases'] = suite_list
     path = os.path.join(case_dir_path, name + '.yml')
     dump_yaml_file(path, testcase_dict)
-    test_suite = module + '_testsuite.yml'
 
-    return suite_dir_path,test_suite,suite_data
+
+    return suite_dir_path,suite_data
 
 
 
@@ -298,9 +302,10 @@ def run_by_suite(index, base_url, path):
     suite_dir_path = ''
     try:
         for val in include:
-            suite_dir_path,test_suite,suite_data = run_by_single_suite(val[0], base_url, path)
+            suite_dir_path,suite_data = run_by_single_suite(val[0], base_url, path)
             list_data.append(suite_data)
         suite_dict['testcases'] = list_data
+        test_suite = 'TFbank_testsuite.yml'
         dump_yaml_file(os.path.join(suite_dir_path, test_suite), suite_dict)
     except:
         print('数据格式错误')
@@ -390,7 +395,7 @@ def run_test_by_type(id, base_url, path, type):
 def run_test_by_env(path):
     #加载配置信息
     env_list = []
-    env_request = eval(TestCaseInfo.objects.get(id=21).request)
+    env_request = eval(TestCaseInfo.objects.get(name='env配置').request)
     env_data = env_request['config']['request']['json']
     for key in env_data:
         data = key + '=' + env_data[key]
