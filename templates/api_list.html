@@ -92,11 +92,11 @@
         </div>
 
         <div class="am-btn-toolbars am-btn-toolbar am-kg am-cf">
-            <form id="pro_filter" method="post" action="/api/test_list/1/">
+            <form id="pro_filter" method="post" action="/api/api_list/1/">
                 <ul>
                     <li style="padding-top: 5px">
                         <select name="project" class="am-input-zm am-input-xm"
-                                onchange="auto_load('#pro_filter', '/api/add_case/', '#module', 'module')">
+                                onchange="auto_load('#pro_filter',api/add_case/', '#module', 'module')">
                             <option value="{{ info.belong_project }}"
                                     selected>{{ info.belong_project }}</option>
                             {% for foo in project %}
