@@ -99,7 +99,7 @@
                     <ul id='tests-toggle' class='dropdown-content'>
                         <li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a>
                         </li>
-                        <li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+                        <li status='failures'><a href='#!'>failures <i class='material-icons red-text'>cancel</i></a></li>
                         <li status="skip"><a href="#!">Skip <i class="material-icons cyan-text">redo</i></a></li>
                         <li class='divider'></li>
                         <li status='clear' clear='true'><a href='#!'>Clear Filters <i
@@ -150,7 +150,7 @@
                     </a>
 
                     <div class='input-field left hide'>
-                        <input style="color: red" id='search-tests' type='text' class='validate browser-default'
+                        <input style="color: red" id='search-tests1' type='text' class='validate browser-default'
                                placeholder='Search Tests...'>
                     </div>
 
@@ -172,16 +172,16 @@
                             </div>
                             <div class='block text-small'>
                             <span class='tooltipped' data-position='top'><span
-                                    class='strong'>{{ stat.successes }}</span> test(s) passed</span>
+                                    class='strong'>{{ stat.teststeps.successes }}</span> test(s) passed</span>
                                 <span class='tooltipped' data-position='top'><span
-                                        class='strong'>{{ stat.failures }}</span> test(s) failed</span>
+                                        class='strong'>{{ stat.teststeps.failures }}</span> test(s) failuresed</span>
                             </div>
                             <div class='block text-small'>
                             <span class='strong tooltipped' data-position='top'
-                            >{{ stat.errors }}</span>
+                            >{{ stat.teststeps.errors }}</span>
                                 test(s) errored
                                 <span class='strong tooltipped' data-position='top'
-                                >{{ stat.skipped }}</span>
+                                >{{ stat.teststeps.skipped }}</span>
                                 test(s) skipped
                             </div>
                         </div>
@@ -198,8 +198,8 @@
                             </span>
                             </div>
                             <div class='block text-small'>
-                                <span id="fail_suites" class='strong tooltipped' data-position='top'></span> suite(s)
-                                failed
+                                <span id="failures_suites" class='strong tooltipped' data-position='top'></span> suite(s)
+                                failuresed
                             </div>
                         </div>
                     </div>
@@ -219,7 +219,7 @@
                             <li class='test displayed active has-leaf pass' status='pass' bdd='true'
                                 test-id='{{ test_suite_summary.name }}_{{ forloop.counter }}'>
                                 {% else %}
-                            <li class='test displayed active has-leaf fail' status='fail' bdd='false'
+                            <li class='test displayed active has-leaf failures' status='failures' bdd='false'
                                 test-id='{{ test_suite_summary.name }}_{{ forloop.counter }}'>
                         {% endif %}
                         <div class='test-heading'>
@@ -228,7 +228,7 @@
                             {% if test_suite_summary.success == True %}
                                 <span class='test-status right pass'>pass</span>
                             {% else %}
-                                <span class='test-status right fail'>fail</span>
+                                <span class='test-status right failures'>fail</span>
                             {% endif %}
 
 
@@ -239,7 +239,7 @@
                                 <span class='label end-time'>{{ test_suite_summary.time.duration|floatformat:3 }} seconds</span>
                             </div>
                             <div class='test-desc'>Pass: {{ test_suite_summary.stat.successes }} ;
-                                Fail: {{ test_suite_summary.stat.failures }} ;
+                                failures: {{ test_suite_summary.stat.failures }} ;
                                 Error: {{ test_suite_summary.stat.errors }}
                                 Skip: {{ test_suite_summary.stat.skipped }} ;
                             </div>
@@ -255,7 +255,7 @@
                                         <li class='node level-1 leaf pass' status='pass'
                                             test-id='{{ test_suite_summary.name }}_{{ record.name }}_{{ forloop.counter }}'>
                                             {% elif record.status == 'failure' %}
-                                        <li class='node level-1 leaf fail' status='fail'
+                                        <li class='node level-1 leaf failures' status='failures'
                                             test-id='{{ test_suite_summary.name }}_{{ record.name }}_{{ forloop.counter }}'>
                                             {% elif record.status == 'error' %}
                                         <li class='node level-1 leaf error' status='error'
@@ -267,11 +267,11 @@
                                 <div class='collapsible-header'>
                                     <div class='node-name'>{{ record.name }}</div>
                                     <span class='node-time'>{{ record.start_timestamp }}</span>
-                                    <span class='node-duration'>response_time: {{ record.meta_data.response.response_time_ms }} ms</span>
+                                    <span class='node-duration'>response_time: {{ record.meta_datas.stat.response_time_ms }} ms</span>
                                     {% if  record.status == 'success' %}
                                         <span class='test-status right pass'>pass</span>
                                     {% elif record.status == 'failure' %}
-                                        <span class='test-status right fail'>fail</span>
+                                        <span class='test-status right failures'>fail</span>
                                     {% elif record.status == 'error' %}
                                         <span class='test-status right error'>error</span>
                                     {% elif record.status == 'skipped' %}
@@ -298,21 +298,21 @@
                                                 <td class='status info' title='info' alt='info'><i
                                                         class='material-icons'>low_priority</i></td>
                                                 <td class='timestamp'>url</td>
-                                                <td class='step-details'>{{ record.meta_data.request.url }}</td>
+                                                <td class='step-details'>{{ record.meta_datas.data.0.request.url }}</td>
                                             </tr>
                                             <tr class='info' status='info'>
                                                 <td class='status info' title='info' alt='info'><i
                                                         class='material-icons'>low_priority</i></td>
                                                 <td class='timestamp'>method</td>
-                                                <td class='step-details'>{{ record.meta_data.request.method }}</td>
+                                                <td class='step-details'>{{ record.meta_datas.data.0.request.method }}</td>
                                             </tr>
                                             <tr class='info' status='info'>
                                                 <td class='status info' title='info' alt='info'><i
                                                         class='material-icons'>low_priority</i></td>
                                                 <td class='timestamp'>status_code</td>
-                                                <td class='step-details'>{{ record.meta_data.response.status_code }}</td>
+                                                <td class='step-details'>{{ record.meta_datas.data.0.response.status_code }}</td>
                                             </tr>
-                                            {% for key, value in record.meta_data.request.items %}
+                                            {% for key, value in record.meta_datas.data.0.request.items %}
                                                 {% if key != 'url' and key != 'method' and key != 'start_timestamp' %}
                                                     <tr class='log' status='debug'>
                                                         <td class='status debug' title='debug' alt='debug'><i
@@ -320,7 +320,7 @@
                                                         <td class='timestamp'>{{ key }}</td>
                                                         <td class='step-details'>
                                                             {% if key == "headers" %}
-                                                                {% for header_key, header_value in record.meta_data.request.headers.items %}
+                                                                {% for header_key, header_value in record.meta_datas.data.0.request.headers.items %}
                                                                     <div>
                                                                         <strong>{{ header_key }}</strong>: {{ header_value }}
                                                                     </div>
@@ -333,15 +333,15 @@
                                                 {% endif %}
                                             {% endfor %}
 
-                                            {% for key, value in record.meta_data.response.items %}
-                                                {% if key != "content" and key != "json" and key != "elapsed_ms" and key != "response_time_ms" and key != "content_size" and key != "content_type" and key != "status_code" and key != "reason" and key != "ok" and key != "encoding" and key != "url" %}
+                                            {% for key, value in record.meta_datas.data.0.response.items %}
+                                                {% if key != "content" and key != "cookies" and key != "elapsed_ms" and key != "response_time_ms" and key != "content_size" and key != "content_type" and key != "status_code" and key != "reason" and key != "ok" and key != "encoding" and key != "url" %}
                                                     <tr class='log' status='debug'>
                                                         <td class='status debug' title='debug' alt='debug'><i
                                                                 class='material-icons'>low_priority</i></td>
                                                         <td class='timestamp'>{{ key }}</td>
                                                         <td class='step-details'>
                                                             {% if key == "headers" %}
-                                                                {% for header_key, header_value in record.meta_data.response.headers.items %}
+                                                                {% for header_key, header_value in record.meta_datas.data.0.response.headers.items %}
                                                                     <div>
                                                                         <strong>{{ header_key }}</strong>: {{ header_value }}
                                                                     </div>
@@ -365,7 +365,7 @@
                                                         class='material-icons'>low_priority</i></td>
                                                 <td class='timestamp'>Validators</td>
                                                 <td class='step-details'>
-                                                    {% for validator in record.meta_data.validators %}
+                                                    {% for validator in record.meta_datas.validators %}
                                                         <div>
                                                             <strong>{{ validator.comparator }}:</strong>[ {{ validator.expect }}
                                                             ,&nbsp;&nbsp;{{ validator.check_value }} ]
@@ -380,21 +380,21 @@
                                                 <td class='timestamp'>Statistics</td>
                                                 <td class='step-details'>
                                                     <div>
-                                                        content_size(bytes): {{ record.meta_data.response.content_size }}
+                                                        content_size(bytes): {{ record.meta_datas.stat.content_size }}
                                                     </div>
                                                     <div>
-                                                        response_time(ms): {{ record.meta_data.response.response_time_ms }}
+                                                        response_time(ms): {{ record.meta_datas.stat.response_time_ms }}
                                                     </div>
                                                     <div>
-                                                        elapsed(ms): {{ record.meta_data.response.elapsed_ms }}
+                                                        elapsed(ms): {{ record.meta_datas.stat.elapsed_ms }}
                                                     </div>
                                                 </td>
                                             </tr>
 
 
                                             {% if record.attachment %}
-                                                <tr class='log' status='fail'>
-                                                    <td class='status fail' title='fail' alt='fail'><i
+                                                <tr class='log' status='failures'>
+                                                    <td class='status failures' title='failures' alt='failures'><i
                                                             class='material-icons'>cancel</i></td>
                                                     <td class='timestamp'>exception:</td>
                                                     <td class='step-details'>
@@ -424,7 +424,7 @@
                     <span class="blue-text" status="info" alt="info" title="info"><i
                             class="material-icons">info_outline</i></span>
                     <span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
-                    <span class="red-text" status="fail" alt="fail" title="fail"><i
+                    <span class="red-text" status="failures" alt="failures" title="failures"><i
                             class="material-icons">cancel</i></span>
                     <span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i
                             class="material-icons">cancel</i></span>
@@ -473,24 +473,24 @@
                         <div class='category-heading'>
                             <span class='category-name'>All Suites</span>
                             <span class='category-status right'>
-							    <span class='label pass'>{{ stat.successes }} </span>
-                                {% if stat.failures != 0 %}
-                                    <span class='label fail'>{{ stat.failures }}</span>
+							    <span class='label pass'>{{ stat.teststeps.successes }} </span>
+                                {% if stat.teststeps.failures != 0 %}
+                                    <span class='label failures'>{{ stat.teststeps.failures }}</span>
                                 {% endif %}
-                                {% if stat.errors != 0 %}
-                                    <span class='label blue lighten-1'>{{ stat.errors }}</span>
+                                {% if stat.teststeps.errors != 0 %}
+                                    <span class='label blue lighten-1'>{{ stat.teststeps.errors }}</span>
                                 {% endif %}
-                                {% if stat.skipped != 0 %}
-                                    <span class='label yellow darken-2'>{{ stat.skipped }}</span>
+                                {% if stat.teststeps.skipped != 0 %}
+                                    <span class='label yellow darken-2'>{{ stat.teststeps.skipped }}</span>
                                 {% endif %}
                                 </span>
                         </div>
                         <div class='category-content hide'>
                             <div class='category-status-counts'>
-                                <span class='label green accent-4 white-text'>Passed: {{ stat.successes }}</span>
-                                <span class='label red lighten-1 white-text'>Failed: {{ stat.failures }}</span>
-                                <span class='label blue lighten-1 white-text'>Errored: {{ stat.errors }}</span>
-                                <span class="label yellow darken-2 white-text">Skipped: {{ stat.skipped }}</span>
+                                <span class='label green accent-4 white-text'>Passed: {{ stat.teststeps.successes }}</span>
+                                <span class='label red lighten-1 white-text'>failuresed: {{ stat.teststeps.failures }}</span>
+                                <span class='label blue lighten-1 white-text'>Errored: {{ stat.teststeps.errors }}</span>
+                                <span class="label yellow darken-2 white-text">Skipped: {{ stat.teststeps.skipped }}</span>
                             </div>
 
                             <div class='category-tests'>
@@ -511,7 +511,7 @@
                                             {% if test_suite_summary.success == True %}
                                                 <td><span class='test-status pass'>pass</span></td>
                                             {% else %}
-                                                <td><span class='test-status fail'>fail</span></td>
+                                                <td><span class='test-status failures'>failures</span></td>
                                             {% endif %}
 
                                         </tr>
@@ -524,7 +524,7 @@
                                                     {% if record.status == 'success' %}
                                                         <td><span class='test-status pass'>pass</span></td>
                                                     {% elif record.status == 'failure' %}
-                                                        <td><span class='test-status fail'>fail</span></td>
+                                                        <td><span class='test-status failures'>failures</span></td>
                                                     {% elif record.status == 'error' %}
                                                         <td><span class='test-status error'>error</span></td>
                                                     {% elif record.status == 'skipped' %}
@@ -548,7 +548,7 @@
                                 <span class='category-status right'>
 							    <span class='label pass'>{{ test_suite_summary.stat.successes }} </span>
                                     {% if test_suite_summary.stat.failures != 0 %}
-                                        <span class='label fail'>{{ test_suite_summary.stat.failures }}</span>
+                                        <span class='label failures'>{{ test_suite_summary.stat.failures }}</span>
                                     {% endif %}
                                     {% if test_suite_summary.stat.errors != 0 %}
                                         <span class='label blue lighten-1'>{{ test_suite_summary.stat.errors }}</span>
@@ -561,7 +561,7 @@
                             <div class='category-content hide'>
                                 <div class='category-status-counts'>
                                     <span class='label green accent-4 white-text'>Passed: {{ test_suite_summary.stat.successes }}</span>
-                                    <span class='label red lighten-1 white-text'>Failed: {{ test_suite_summary.stat.failures }}</span>
+                                    <span class='label red lighten-1 white-text'>failuresed: {{ test_suite_summary.stat.failures }}</span>
                                     <span class='label blue lighten-1 white-text'>Errored: {{ stat.errors }}</span>
                                     <span class="label yellow darken-2 white-text">Skipped: {{ test_suite_summary.stat.skipped }}</span>
                                 </div>
@@ -584,7 +584,7 @@
                                                 {% if record.status == 'success' %}
                                                     <td><span class='test-status pass'>pass</span></td>
                                                 {% elif record.status == 'failure' %}
-                                                    <td><span class='test-status fail'>fail</span></td>
+                                                    <td><span class='test-status failures'>failures</span></td>
                                                 {% elif record.status == 'error' %}
                                                     <td><span class='test-status error'>error</span></td>
                                                 {% elif record.status == 'skipped' %}
@@ -619,25 +619,25 @@
                 <div class='col s2'>
                     <div class='card-panel r'>
                         Pass
-                        <div class='panel-lead'>{{ stat.successes }}</div>
+                        <div class='panel-lead'>{{ stat.teststeps.successes }}</div>
                     </div>
                 </div>
                 <div class='col s2'>
                     <div class='card-panel r'>
-                        Fail
-                        <div class='panel-lead'>{{ stat.failures }}</div>
+                        failures
+                        <div class='panel-lead'>{{ stat.teststeps.failures }}</div>
                     </div>
                 </div>
                 <div class='col s2'>
                     <div class='card-panel r'>
                         Error
-                        <div class='panel-lead'>{{ stat.errors }}</div>
+                        <div class='panel-lead'>{{ stat.teststeps.errors }}</div>
                     </div>
                 </div>
                 <div class='col s2'>
                     <div class='card-panel r'>
                         Skip
-                        <div class='panel-lead'>{{ stat.skipped }}</div>
+                        <div class='panel-lead'>{{ stat.teststeps.skipped }}</div>
                     </div>
                 </div>
                 <div class='col s2'>
@@ -660,23 +660,23 @@
                             <tr>
                                 <th>Name</th>
                                 <th>Passed</th>
-                                <th>Failed</th>
+                                <th>failures</th>
                                 <th>Errored</th>
                                 <th>Skipped</th>
                             </tr>
                             <tr>
                                 <td>All Suites</td>
-                                <td class="pass">{{ stat.successes }}</td>
-                                <td class="fail">{{ stat.failures }}</td>
-                                <td class="error">{{ stat.errors }}</td>
-                                <td class="skip">{{ stat.skipped }}</td>
+                                <td class="pass">{{ stat.teststeps.successes }}</td>
+                                <td class="failures">{{ stat.teststeps.failures }}</td>
+                                <td class="error">{{ stat.teststeps.errors }}</td>
+                                <td class="skip">{{ stat.teststeps.skipped }}</td>
                             </tr>
 
                             {% for test_suite_summary in details %}
                                 <tr>
                                     <td>{{ test_suite_summary.name }}</td>
                                     <td class="pass">{{ test_suite_summary.stat.successes }}</td>
-                                    <td class="fail">{{ test_suite_summary.stat.failures }}</td>
+                                    <td class="failures">{{ test_suite_summary.stat.failures }}</td>
                                     <td class="error">{{ test_suite_summary.stat.errors }}</td>
                                     <td class="skip">{{ test_suite_summary.stat.skipped }}</td>
                                 </tr>
@@ -701,16 +701,16 @@
     {% endfor %}
 
     var statusGroup = {
-        passParent: {{ stat.successes }},
-        failParent: {{ stat.failures }},
+        passParent: {{ stat.teststeps.successes }},
+        failuresParent: {{ stat.teststeps.failures }},
         fatalParent: 0,
-        errorParent: {{ stat.errors }},
+        errorParent: {{ stat.teststeps.errors }},
         warningParent: 0,
-        skipParent: {{ stat.skipped }},
+        skipParent: {{ stat.teststeps.skipped }},
         exceptionsParent: 0,
 
         passChild: test_suite_success,
-        failChild: {{ details|length }} -test_suite_success,
+        failuresChild: {{ details|length }} -test_suite_success,
         fatalChild: 0,
         errorChild: 0,
         warningChild: 0,
@@ -719,7 +719,7 @@
         exceptionsChild: 0,
 
         passGrandChild: 0,
-        failGrandChild: 0,
+        failuresGrandChild: 0,
         fatalGrandChild: 0,
         errorGrandChild: 0,
         warningGrandChild: 0,
@@ -729,7 +729,7 @@
     };
 
     document.getElementById('pass_suites').innerHTML = "<span class='strong'>" + test_suite_success + "</span> suite(s) passed";//找到id为'myId'的标签内插入html变量的值
-    document.getElementById('fail_suites').innerText = {{ details|length }} -test_suite_success;//找到id为'myId'的标签替换它的内容为html的值
+    document.getElementById('failures_suites').innerText = {{ details|length }} -test_suite_success;//找到id为'myId'的标签替换它的内容为html的值
 
 </script>
 

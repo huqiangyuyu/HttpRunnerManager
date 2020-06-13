@@ -57,7 +57,7 @@
                            style="font-weight: inherit; font-size: small ">运行环境:</label>
                     <div class="col-sm-8">
                         <select class="form-control" id="env_name" name="env_name">
-                            <option value="">自带环境</option>
+                            <option value="">请选择</option>
                             {% for foo in env %}
                                 <option value="{{ foo.base_url }}">{{ foo.env_name }}</option>
                             {% endfor %}
