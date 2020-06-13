@@ -407,7 +407,7 @@ def test_list(request, id):
         if test_info.get('mode') == 'del':
             msg = del_test_data(test_info.pop('id'),tag)
         elif test_info.get('mode') == 'copy':
-            msg = copy_test_data(test_info.get('data').pop('index'), test_info.get('data').pop('name'))
+            msg = copy_test_data(test_info.get('data').pop('index'), test_info.get('data').pop('name'),tag)
         return HttpResponse(get_ajax_msg(msg, 'ok'))
 
     else:
@@ -473,7 +473,7 @@ def config_list(request, id):
         if test_info.get('mode') == 'del':
             msg = del_test_data(test_info.pop('id'),'case')
         elif test_info.get('mode') == 'copy':
-            msg = copy_test_data(test_info.get('data').pop('index'), test_info.get('data').pop('name'))
+            msg = copy_test_data(test_info.get('data').pop('index'), test_info.get('data').pop('name'),'case')
         return HttpResponse(get_ajax_msg(msg, 'ok'))
     else:
         filter_query = set_filter_session(request)
