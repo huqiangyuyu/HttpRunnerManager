@@ -113,12 +113,17 @@ def get_pager_info(Model, filter_query, url, id, per_items=12):
 
     elif url == '/api/module_list/':
 
-        if belong_project != 'All':
-            obj = obj.filter(belong_project__project_name__contains=belong_project)
-
-        elif belong_module != '请选择':
-            obj = obj.filter(module_name__contains=belong_module) if belong_module != 'All' \
+        if belong_project != 'All' and belong_module != '请选择':
+            obj = obj.filter(belong_project__project_name__contains=belong_project).filter(
+                module_name__contains=belong_module) if belong_module != 'All' \
                 else obj.filter(test_user__contains=user)
+
+        # if belong_project != 'All':
+        #     obj = obj.filter(belong_project__project_name__contains=belong_project)
+		#
+        # elif belong_module != '请选择':
+        #     obj = obj.filter(module_name__contains=belong_module) if belong_module != 'All' \
+        #         else obj.filter(test_user__contains=user)
 
     elif url == '/api/report_list/':
         obj = obj.filter(report_name__contains=filter_query.get('report_name'))
