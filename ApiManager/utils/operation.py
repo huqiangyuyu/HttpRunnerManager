@@ -167,7 +167,7 @@ def add_case_data(type, **kwargs):
         return '字段长度超长，请重新编辑'
     return 'ok'
 
-def update_api_data(id,validate_dict, extract_dict):
+def update_api_data(id,validate_dict, extract_dict,setup_hooks_dict,teardown_hooks_dict):
     """
     用例信息落地
     :param type: boolean: true: 添加新用例， false: 更新用例
@@ -183,6 +183,10 @@ def update_api_data(id,validate_dict, extract_dict):
     request['teststeps']['validate']=validate_dict
     if extract_dict != '不存在extract':
         request['teststeps']['extract']=extract_dict
+    if setup_hooks_dict != '不存在setup_hooks':
+        request['teststeps']['setup_hooks']=setup_hooks_dict
+    if teardown_hooks_dict != '不存在teardown_hooks':
+        request['teststeps']['teardown_hooks']=teardown_hooks_dict
     # belong_module = ModuleInfo.objects.get_module_name(module, type=False)
 
     api_opt.api_update(id, **request)
@@ -248,7 +252,7 @@ def add_api_data(type, **kwargs):
 
 '''配置数据落地'''
 
-def query_config_id(name):
+def query_config_id(project,name):
     """
     配置信息落地
     :param type: boolean: true: 添加新配置， fasle: 更新配置
@@ -256,7 +260,7 @@ def query_config_id(name):
     :return: ok or tips
     """
     case_opt = TestCaseInfo.objects
-    case_id = case_opt.get_case_id(name)
+    case_id = case_opt.get_case_id(name,project)
     return case_id
 
 def query_module_name(id):
@@ -576,7 +580,7 @@ def copy_test_data(id, name,tag):
     request = eval(test.request)
     if 'test' in request.keys():
         request.get('test')['name'] = name
-    else:
+    elif 'config' in request.keys():
         request.get('config')['name'] = name
     test.request = request
     test.save()

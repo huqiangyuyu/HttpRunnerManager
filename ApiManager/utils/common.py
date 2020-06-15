@@ -829,7 +829,7 @@ def upload_file_logi(files, project, module, account):
 			add_case['test']['name'] = case_name
 			# api_list = content['config']['config_info']['include']
 			add_config_data(type=True, **config_dict)
-			case_id = query_config_id(name)
+			case_id = query_config_id(project,name)
 			# module_name = query_module_name(module)[case_id, name]
 			config_list.append(case_id)
 			config_list.append(name)
@@ -856,6 +856,16 @@ def upload_file_logi(files, project, module, account):
 					extract_dict = content['teststeps'][i]['extract']
 				except :
 					extract_dict = '不存在extract'
+				try:
+					setup_hooks_dict = content['teststeps'][i]['setup_hooks']
+				except :
+					setup_hooks_dict = '不存在setup_hooks'
+
+				try:
+					teardown_hooks_dict = content['teststeps'][i]['teardown_hooks']
+				except :
+					teardown_hooks_dict = '不存在teardown_hooks'
+
 				# api_name = content['teststeps'][i]['name']
 				api_name = api_dict['teststeps']['name']
 				api_id = query_api_id(api_name,module)
@@ -863,7 +873,7 @@ def upload_file_logi(files, project, module, account):
 				api_list.append(apiList)
 				add_case['test']['case_info']['include'] = api_list
 				#更新api接口
-				update_api_data(api_id, validate_dict, extract_dict)
+				update_api_data(api_id, validate_dict, extract_dict,setup_hooks_dict,teardown_hooks_dict)
 			add_case_data(type=True, **add_case)
 
 

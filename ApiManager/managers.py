@@ -137,8 +137,8 @@ class TestCaseInfoManager(models.Manager):
     def get_case_name(self, name, module_name, belong_project):
         return self.filter(belong_module__id=module_name).filter(name__exact=name).filter(
             belong_project__exact=belong_project).count()
-    def get_case_id(self, name):
-        return self.get(name=name).id
+    def get_case_id(self, name,project):
+        return self.filter(belong_project__exact=project).get(name=name).id
     def get_case_by_id(self, index, type=True):
         if type:
             return self.filter(id=index).all()
