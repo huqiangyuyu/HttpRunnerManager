@@ -255,9 +255,12 @@ def run_by_single_suite(index, base_url, path):
                     suite_name = request['test']['request']['data']['name']
                 else:
                     suite_name = name
-                if 'parameters' in config_request['config']:
-                    suite_data = {'name': suite_name, 'testcase': pre_suite,'parameters':config_request['config']['parameters']}
-                    config_request['config'].pop('parameters')
+                # if 'parameters' in config_request['config']:
+                #     suite_data = {'name': suite_name, 'testcase': pre_suite,'parameters':config_request['config']['parameters']}
+                #     config_request['config'].pop('parameters')
+                if 'parameters' in request['test']:
+                    suite_data = {'name': suite_name, 'testcase': pre_suite,'parameters':request['test']['parameters']}
+                    request['test'].pop('parameters')
                 else:
                     suite_data = {'name': suite_name, 'testcase': pre_suite}
                 config_request['config']['name'] = name
