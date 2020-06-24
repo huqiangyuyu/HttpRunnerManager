@@ -844,7 +844,7 @@ def upload_file_logi(files, project, module, account):
 				}
 				api_dict['teststeps']['name'] = content['teststeps'][i]['name']
 				api_dict['teststeps']['request'] = content['teststeps'][i]['request']
-				api_set = query_api_name(api_dict)
+				api_set = query_api_name(project,api_dict)
 				if api_set.exists():
 					tag,api_dict = check_api_name(api_dict,api_set)
 					if tag == 1:

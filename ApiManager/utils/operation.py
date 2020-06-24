@@ -296,7 +296,7 @@ def query_api_id(name,module):
     api_id = api_opt.get_api_id(name,module)
     return api_id
 
-def query_api_name(api_dict):
+def query_api_name(project,api_dict):
     """
     查询接口名,判断接口是否存在
     :param type: boolean: true: 添加新配置， fasle: 更新配置
@@ -306,7 +306,7 @@ def query_api_name(api_dict):
     name = api_dict['teststeps']['name']
     module = api_dict['teststeps']['api_info']['module']
     api_opt = ApiInfo.objects
-    api_set = api_opt.query_api_name(name,module)
+    api_set = api_opt.query_api_name(name,module,project)
     return api_set
 
 def check_api_name(api_dict,api_set):
