@@ -264,8 +264,12 @@ def run_by_single_suite(index, base_url, path):
                 else:
                     suite_data = {'name': suite_name, 'testcase': pre_suite}
                 config_request['config']['name'] = name
+
+
                 testcase_dict['config'] = config_request['config']
-                # suite_list.append(suite_data)
+                # testcase_dict['config'].pop('setup_hooks')
+                # testcase_dict['config'].pop('teardown_hooks')
+                # # suite_list.append(suite_data)
             else:
                 id = test_info[0]
                 api_name = test_info[1]
