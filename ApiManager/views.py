@@ -746,7 +746,7 @@ def get_project_info(request):
     """
      获取项目相关信息
      :param request:
-     :return:
+     :return:run
      """
 
     if request.is_ajax():
