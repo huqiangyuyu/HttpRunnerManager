@@ -393,18 +393,27 @@
                                         <option selected>data</option>
                                         <option>json</option>
                                         <option>params</option>
+                                        <option>files</option>
                                     {% elif 'json' in request.request.keys %}
                                         <option selected>json</option>
                                         <option>data</option>
                                         <option>params</option>
+                                        <option>files</option>
                                     {% elif 'params' in request.request.keys %}
                                         <option selected>params</option>
                                         <option>data</option>
                                         <option>json</option>
+                                        <option>files</option>
+                                    {% elif 'files' in request.request.keys %}
+                                        <option selected>files</option>
+                                        <option>data</option>
+                                        <option>json</option>
+                                        <option>params</option>
                                     {% else %}
                                         <option>data</option>
                                         <option>json</option>
                                         <option>params</option>
+                                        <option>files</option>
 
                                     {% endif %}
                                 </select>
@@ -425,6 +434,18 @@
                                             style="margin-top: 0px; margin-bottom: 0px; min-height: 200px;">
 <textarea style="left: 0px">
 {{ request.request.json|json_dumps }}
+</textarea>
+                                       </pre>
+                                   </div>
+                                </span>
+{#                            {% else %}#}
+                            {% elif 'files' in request.request.keys %}
+                                <span style="font-size:10px;" id="json-text">
+                                   <div style="margin-left: 0px; margin-top: 5px; height: 200px">
+                                       <pre id="code" class="ace_editor"
+                                            style="margin-top: 0px; margin-bottom: 0px; min-height: 200px;">
+<textarea style="left: 0px">
+{{ request.request.files|json_dumps }}
 </textarea>
                                        </pre>
                                    </div>
@@ -757,7 +778,8 @@
             editor = null;
         }
         $('#DataType').on('change', function () {
-            if ($('#DataType').val() === 'json') {
+            if ($('#DataType').val() === 'files' || $('#DataType').val() === 'json') {
+                $('#json-text').remove();
                 $('#add_data').attr('disabled', true);
                 $('#del_data').attr('disabled', true);
                 $('#data').remove();
@@ -772,7 +794,7 @@
                 editor = ace.edit("code");
                 init_acs('json', 'github', editor);
 
-            } else {
+            }else {
                 var table = '<table class="table table-hover table-condensed table-bordered table-striped" id="data">\n' +
                     '                                <caption>' + $('#DataType').val() + ':</caption>\n' +
                     '                                <thead>\n' +
