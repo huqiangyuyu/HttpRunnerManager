@@ -394,18 +394,27 @@
                                         <option selected>data</option>
                                         <option>json</option>
                                         <option>params</option>
+                                        <option>files</option>
                                     {% elif 'json' in request.request.keys %}
                                         <option selected>json</option>
                                         <option>data</option>
                                         <option>params</option>
+                                        <option>files</option>
                                     {% elif 'params' in request.request.keys %}
                                         <option selected>params</option>
                                         <option>data</option>
                                         <option>json</option>
+                                        <option>files</option>
+                                    {% elif 'files' in request.request.keys %}
+                                        <option selected>files</option>
+                                        <option>data</option>
+                                        <option>json</option>
+                                        <option>params</option>
                                     {% else %}
                                         <option>data</option>
                                         <option>json</option>
                                         <option>params</option>
+                                        <option>files</option>
 
                                     {% endif %}
                                 </select>
