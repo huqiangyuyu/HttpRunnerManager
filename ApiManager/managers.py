@@ -204,7 +204,7 @@ class ApiInfoManager(models.Manager):
     def query_api_name(self, name,module, belong_project):
         # return self.get(name=name).filter(belong_module=module).id
         return self.filter(
-            belong_project__exact=belong_project).filter(belong_module=module).filter(name__contains=name).values('request')
+            belong_project__exact=belong_project).filter(belong_module=module).filter(name=name).values('request')
     def get_api_request(self, id):
         # return self.get(name=name).filter(belong_module=module).id
         return self.get(id=id).request
