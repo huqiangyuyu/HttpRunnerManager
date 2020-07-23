@@ -177,6 +177,83 @@ function copy_data_ajax(id, url) {
     });
 }
 
+function api_ajax(type, editor) {
+    var url = $("#url").serializeJSON();
+    var method = $("#method").serializeJSON();
+    var dataType = $("#DataType").serializeJSON();
+    var caseInfo = $("#form_message").serializeJSON();
+    var variables = $("#form_variables").serializeJSON();
+    var request_data = null;
+    if (dataType.DataType === 'json' || dataType.DataType === 'files' ) {
+        try {
+            request_data  = eval('(' + editor.session.getValue() + ')');
+        }
+        catch (err) {
+            myAlert('Json格式输入有误！');
+            return
+        }
+    } else {
+        request_data = $("#form_request_data").serializeJSON();
+    }
+    var headers = $("#form_request_headers").serializeJSON();
+    var extract = $("#form_extract").serializeJSON();
+    var validate = $("#form_validate").serializeJSON();
+    var parameters = $('#form_params').serializeJSON();
+    var hooks = $('#form_hooks').serializeJSON();
+    var include = [];
+    var i = 0;
+    $("ul#pre_case li a").each(function () {
+        include[i++] = [$(this).attr('id'), $(this).text()];
+    });
+    caseInfo['include'] = include;
+    const test = {
+        "test": {
+            "name": caseInfo,
+            "parameters": parameters,
+            "variables": variables,
+            "request": {
+                "url": url.url,
+                "method": method.method,
+                "headers": headers,
+                "type": dataType.DataType,
+                "request_data": request_data
+            },
+            "extract": extract,
+            "validate": validate,
+            "hooks": hooks,
+        }
+    };
+    if (type === 'edit') {
+        url = '/api/edit_case/';
+    }else if(type === 'api') {
+        url = '/api/add_api/';
+    }else if(type === 'edit_api'){
+        url ='/api/edit_api/';
+    }else {
+        url = '/api/add_case/';
+    }
+    $.ajax({
+        type: 'post',
+        url: url,
+        data: JSON.stringify(test),
+        contentType: "application/json",
+        success: function (data) {
+            if (data === 'session invalid') {
+                window.location.href = "/api/login/";
+            } else {
+                if (data.indexOf('/api/') != -1) {
+                    window.location.href = data;
+                } else {
+                    myAlert(data);
+                }
+            }
+        },
+        error: function () {
+            myAlert('Sorry，服务器可能开小差啦, 请重试!');
+        }
+    });
+}
+
 function case_ajax(type, editor) {
     var url = $("#url").serializeJSON();
     var method = $("#method").serializeJSON();

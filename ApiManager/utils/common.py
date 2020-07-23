@@ -402,7 +402,7 @@ def api_info_logic(type=True, **kwargs):
 		request_data = test.get('request').pop('request_data')
 		data_type = test.get('request').pop('type')
 		if request_data and data_type:
-			if data_type == 'json':
+			if data_type == 'json' or data_type == 'files':
 				test.get('request').setdefault(data_type, request_data)
 			else:
 				data_dict = key_value_dict('data', **request_data)
